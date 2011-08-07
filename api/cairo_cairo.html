@@ -33,6 +33,8 @@
 	<li><a href="cairo_svg.html" title="">cairo.svg</a></li>
     <li><a href="cairo_win32.html" title="">cairo.win32</a></li>
     <li><a href="cairo_xcb.html" title="">cairo.xcb</a></li>
+    <li><a href="cairo_ft.html" title="">cairo.ft</a></li>
+    <li><a href="cairo_xlib.html" title="">cairo.xlib</a></li>
     <li><a href="cairo_util.html" title="">cairo.util</a></li>
     </ul>
     <h2><a href="" title="cairo D bindings">cairo.c</a></h2>
@@ -43,6 +45,8 @@
 	<li><a href="cairo_c_svg.html" title="">cairo.c.svg</a></li>
     <li><a href="cairo_c_win32.html" title="">cairo.c.win32</a></li>
     <li><a href="cairo_c_xcb.html" title="">cairo.c.xcb</a></li>
+    <li><a href="cairo_c_ft.html" title="">cairo.c.ft</a></li>
+    <li><a href="cairo_c_xlib.html" title="">cairo.c.xlib</a></li>
     </ul>
 </div>
 </div>
@@ -155,6 +159,7 @@ Most cairoD functions could throw an OutOfMemoryError. This is therefore not
 <dd>A simple struct representing a rectangle<p></p>
 
 <dl><dt class="d_decl">this(Point <i>point</i>, double <i>width</i>, double <i>height</i>);
+<br>this(double <i>x</i>, double <i>y</i>, double <i>width</i>, double <i>height</i>);
 </dt>
 <dd><p></p>
 </dd>
@@ -207,6 +212,10 @@ Most cairoD functions could throw an OutOfMemoryError. This is therefore not
  Used for Extents.<p></p>
 
 <dl><dt class="d_decl">this(Point <i>point1</i>, Point <i>point2</i>);
+</dt>
+<dd><p></p>
+</dd>
+<dt class="d_decl">this(double <i>x1</i>, double <i>y1</i>, double <i>x2</i>, double <i>y2</i>);
 </dt>
 <dd><p></p>
 </dd>
@@ -913,6 +922,7 @@ Use the <span class="d_inlinecode">this(Point p1, Point p2)</span> constructor t
 
 </dd>
 <dt class="d_decl">this(Point <i>p1</i>, Point <i>p2</i>);
+<br>this(double <i>x1</i>, double <i>y1</i>, double <i>x2</i>, double <i>y2</i>);
 </dt>
 <dd>Create a new linear gradient <span class="d_inlinecode">Pattern</span> along the line defined
  by <i>p1</i> and <i>p2</i>. Before using the gradient pattern, a number of
@@ -965,6 +975,7 @@ Use the <span class="d_inlinecode">this(Point c0, double radius0, Point c1, doub
 
 </dd>
 <dt class="d_decl">this(Point <i>c0</i>, double <i>radius0</i>, Point <i>c1</i>, double <i>radius1</i>);
+<br>this(double <i>c0x</i>, double <i>c0y</i>, double <i>radius0</i>, double <i>c1x</i>, double <i>c1y</i>, double <i>radius1</i>);
 </dt>
 <dd>Creates a new radial gradient <span class="d_inlinecode">pattern</span> between the two
  circles defined by (<i>c0</i>, <i>radius0</i>) and (<i>c1</i>, <i>radius1</i>). Before
@@ -1905,6 +1916,7 @@ The pattern's transformation matrix will be locked to
 
 </dd>
 <dt class="d_decl">void <a name="setSourceSurface"></a><span class="ddoc_psymbol">setSourceSurface</span>(Surface <i>sur</i>, double <i>x</i>, double <i>y</i>);
+<br>void <a name="setSourceSurface"></a><span class="ddoc_psymbol">setSourceSurface</span>(Surface <i>sur</i>, Point <i>p1</i>);
 </dt>
 <dd>This is a convenience function for creating a pattern from
  surface and setting it as the source in cr with <span class="d_inlinecode">Context.setSource()</span>.
@@ -2309,6 +2321,7 @@ See <span class="d_inlinecode">fill()</span>, <span class="d_inlinecode">setFill
 
 </dd>
 <dt class="d_decl">void <a name="maskSurface"></a><span class="ddoc_psymbol">maskSurface</span>(Surface <i>surface</i>, Point <i>location</i>);
+<br>void <a name="maskSurface"></a><span class="ddoc_psymbol">maskSurface</span>(Surface <i>surface</i>, double <i>x</i>, double <i>y</i>);
 </dt>
 <dd>A drawing operator that paints the current source using
  the alpha channel of <i>surface</i> as a mask. (Opaque areas of
@@ -2408,6 +2421,7 @@ Note that if the line width is set to exactly zero, then
 
 </dd>
 <dt class="d_decl">bool <a name="inStroke"></a><span class="ddoc_psymbol">inStroke</span>(Point <i>point</i>);
+<br>bool <a name="inStroke"></a><span class="ddoc_psymbol">inStroke</span>(double <i>x</i>, double <i>y</i>);
 </dt>
 <dd>Tests whether the given <i>point</i> is inside the area that would be
  affected by a cairo_stroke() operation given the current path
@@ -2571,6 +2585,7 @@ As of cairo version 1.2.4 any call to <span class="d_inlinecode"><a name="closeP
 
 </dd>
 <dt class="d_decl">void <a name="arc"></a><span class="ddoc_psymbol">arc</span>(Point <i>center</i>, double <i>radius</i>, double <i>angle1</i>, double <i>angle2</i>);
+<br>void <a name="arc"></a><span class="ddoc_psymbol">arc</span>(double <i>centerX</i>, double <i>centerY</i>, double <i>radius</i>, double <i>angle1</i>, double <i>angle2</i>);
 </dt>
 <dd>Adds a circular <a name="arc"></a><span class="ddoc_psymbol">arc</span> of the given <i>radius</i> to the current path.
  The <a name="arc"></a><span class="ddoc_psymbol">arc</span> is centered at <i>center</i>, begins at <i>angle1</i> and proceeds in
@@ -2621,6 +2636,7 @@ If there is a current point, an initial line segment will be
 
 </dd>
 <dt class="d_decl">void <a name="arcNegative"></a><span class="ddoc_psymbol">arcNegative</span>(Point <i>center</i>, double <i>radius</i>, double <i>angle1</i>, double <i>angle2</i>);
+<br>void <a name="arcNegative"></a><span class="ddoc_psymbol">arcNegative</span>(double <i>centerX</i>, double <i>centerY</i>, double <i>radius</i>, double <i>angle1</i>, double <i>angle2</i>);
 </dt>
 <dd>Adds a circular arc of the given <i>radius</i> to the current path.
  The arc is centered at <i>center</i>, begins at <i>angle1</i> and proceeds
@@ -2642,6 +2658,7 @@ See <span class="d_inlinecode">arc()</span> for more details. This function diff
 
 </dd>
 <dt class="d_decl">void <a name="curveTo"></a><span class="ddoc_psymbol">curveTo</span>(Point <i>p1</i>, Point <i>p2</i>, Point <i>p3</i>);
+<br>void <a name="curveTo"></a><span class="ddoc_psymbol">curveTo</span>(double <i>p1x</i>, double <i>p1y</i>, double <i>p2x</i>, double <i>p2y</i>, double <i>p3x</i>, double <i>p3y</i>);
 </dt>
 <dd>Adds a cubic Bézier spline to the path from the current
  point to position <i>p3</i> in user-space coordinates, using <i>p1</i> and <i>p2</i>
@@ -2662,6 +2679,7 @@ If there is no current point before the call to <span class="d_inlinecode"><a na
 
 </dd>
 <dt class="d_decl">void <a name="lineTo"></a><span class="ddoc_psymbol">lineTo</span>(Point <i>p1</i>);
+<br>void <a name="lineTo"></a><span class="ddoc_psymbol">lineTo</span>(double <i>x</i>, double <i>y</i>);
 </dt>
 <dd>Adds a line to the path from the current point to position <i>p1</i>
  in user-space coordinates. After this call the current point
@@ -2677,11 +2695,13 @@ If there is no current point before the call to <span class="d_inlinecode"><a na
 
 </dd>
 <dt class="d_decl">void <a name="moveTo"></a><span class="ddoc_psymbol">moveTo</span>(Point <i>p1</i>);
+<br>void <a name="moveTo"></a><span class="ddoc_psymbol">moveTo</span>(double <i>x</i>, double <i>y</i>);
 </dt>
 <dd>Begin a new sub-path. After this call the current point will be <i>p1</i>.<p></p>
 
 </dd>
 <dt class="d_decl">void <a name="rectangle"></a><span class="ddoc_psymbol">rectangle</span>(Rectangle <i>r</i>);
+<br>void <a name="rectangle"></a><span class="ddoc_psymbol">rectangle</span>(double <i>x</i>, double <i>y</i>, double <i>width</i>, double <i>height</i>);
 </dt>
 <dd>Adds a closed sub-path <a name="rectangle"></a><span class="ddoc_psymbol">rectangle</span> of the given size to the
  current path at position <i>r</i>.point in user-space coordinates.
@@ -2728,6 +2748,7 @@ The <span class="d_inlinecode"><a name="textPath"></a><span class="ddoc_psymbol"
 
 </dd>
 <dt class="d_decl">void <a name="relCurveTo"></a><span class="ddoc_psymbol">relCurveTo</span>(Point <i>rp1</i>, Point <i>rp2</i>, Point <i>rp3</i>);
+<br>void <a name="relCurveTo"></a><span class="ddoc_psymbol">relCurveTo</span>(double <i>rp1x</i>, double <i>rp1y</i>, double <i>rp2x</i>, double <i>rp2y</i>, double <i>rp3x</i>, double <i>rp3y</i>);
 </dt>
 <dd>Relative-coordinate version of <span class="d_inlinecode">curveTo()</span>.
  All offsets are relative to the current point. Adds a
@@ -2758,6 +2779,7 @@ Given a current point of (x, y),
 
 </dd>
 <dt class="d_decl">void <a name="relLineTo"></a><span class="ddoc_psymbol">relLineTo</span>(Point <i>rp1</i>);
+<br>void <a name="relLineTo"></a><span class="ddoc_psymbol">relLineTo</span>(double <i>x</i>, double <i>y</i>);
 </dt>
 <dd>Relative-coordinate version of <span class="d_inlinecode">lineTo()</span>. Adds a line
  to the path from the current point to a point that is
@@ -2774,6 +2796,7 @@ Given a current point of (x, y), cairo_rel_line_to(cr, dx, dy)
 
 </dd>
 <dt class="d_decl">void <a name="relMoveTo"></a><span class="ddoc_psymbol">relMoveTo</span>(Point <i>rp1</i>);
+<br>void <a name="relMoveTo"></a><span class="ddoc_psymbol">relMoveTo</span>(double <i>x</i>, double <i>y</i>);
 </dt>
 <dd>Begin a new sub-path. After this call the current point will
  offset by <i>rp1</i>.
@@ -3451,7 +3474,9 @@ Note that whitespace <i>glyphs</i> do not contribute to the size
 
 </dd>
 <dt class="d_decl">cairo_glyph_t[] <a name="textToGlyphs"></a><span class="ddoc_psymbol">textToGlyphs</span>(double <i>x</i>, double <i>y</i>, string <i>text</i>, cairo_glyph_t[] <i>glyphBuffer</i> = []);
+<br>cairo_glyph_t[] <a name="textToGlyphs"></a><span class="ddoc_psymbol">textToGlyphs</span>(Point <i>p1</i>, string <i>text</i>, cairo_glyph_t[] <i>glyphBuffer</i> = []);
 <br>TextGlyph <a name="textToTextGlyph"></a><span class="ddoc_psymbol">textToTextGlyph</span>(double <i>x</i>, double <i>y</i>, string <i>text</i>, cairo_glyph_t[] <i>glyphBuffer</i> = [], cairo_text_cluster_t[] <i>clusterBuffer</i> = []);
+<br>TextGlyph <a name="textToTextGlyph"></a><span class="ddoc_psymbol">textToTextGlyph</span>(Point <i>p1</i>, string <i>text</i>, cairo_glyph_t[] <i>glyphBuffer</i> = [], cairo_text_cluster_t[] <i>clusterBuffer</i> = []);
 </dt>
 <dd>Converts UTF-8 <i>text</i> to an array of glyphs, optionally with
  cluster mapping, that can be used to render later using ScaledFont.
