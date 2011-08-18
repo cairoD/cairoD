@@ -154,12 +154,12 @@ Most cairoD functions could throw an OutOfMemoryError. This is therefore not
 </dd>
 </dl>
 </dd>
-<dt class="d_decl">struct <a name="Rectangle"></a><span class="ddoc_psymbol">Rectangle</span>;
+<dt class="d_decl">struct <a name="Rectangle"></a><span class="ddoc_psymbol">Rectangle</span>(T) if (is(T == double));
 </dt>
 <dd>A simple struct representing a rectangle<p></p>
 
-<dl><dt class="d_decl">this(Point <i>point</i>, double <i>width</i>, double <i>height</i>);
-<br>this(double <i>x</i>, double <i>y</i>, double <i>width</i>, double <i>height</i>);
+<dl><dt class="d_decl">auto this(Point <i>point</i>, double <i>width</i>, double <i>height</i>);
+<br>auto this(double <i>x</i>, double <i>y</i>, double <i>width</i>, double <i>height</i>);
 </dt>
 <dd><p></p>
 </dd>
@@ -178,11 +178,11 @@ Most cairoD functions could throw an OutOfMemoryError. This is therefore not
 </dd>
 </dl>
 </dd>
-<dt class="d_decl">struct <a name="RectangleInt"></a><span class="ddoc_psymbol">RectangleInt</span>;
+<dt class="d_decl">struct <a name="Rectangle"></a><span class="ddoc_psymbol">Rectangle</span>(T) if (is(T == int));
 </dt>
 <dd>A simple struct representing a rectangle with only <span class="d_inlinecode">int</span> values<p></p>
 
-<dl><dt class="d_decl">this(int <i>x</i>, int <i>y</i>, int <i>width</i>, int <i>height</i>);
+<dl><dt class="d_decl">auto this(int <i>x</i>, int <i>y</i>, int <i>width</i>, int <i>height</i>);
 </dt>
 <dd><p></p>
 </dd>
@@ -201,6 +201,42 @@ Most cairoD functions could throw an OutOfMemoryError. This is therefore not
 <dd><p></p>
 </dd>
 <dt class="d_decl">int <a name="height"></a><span class="ddoc_psymbol">height</span>;
+</dt>
+<dd><p></p>
+</dd>
+</dl>
+</dd>
+<dt class="d_decl">struct <a name="Size"></a><span class="ddoc_psymbol">Size</span>(T) if (is(T == int));
+</dt>
+<dd>A simple struct representing a size with only <span class="d_inlinecode">int</span> values<p></p>
+
+<dl><dt class="d_decl">auto this(int <i>width</i>, int <i>height</i>);
+</dt>
+<dd><p></p>
+</dd>
+<dt class="d_decl">int <a name="width"></a><span class="ddoc_psymbol">width</span>;
+</dt>
+<dd><p></p>
+</dd>
+<dt class="d_decl">int <a name="height"></a><span class="ddoc_psymbol">height</span>;
+</dt>
+<dd><p></p>
+</dd>
+</dl>
+</dd>
+<dt class="d_decl">struct <a name="Size"></a><span class="ddoc_psymbol">Size</span>(T) if (is(T == double));
+</dt>
+<dd>A simple struct representing a size with only <span class="d_inlinecode">int</span> values<p></p>
+
+<dl><dt class="d_decl">auto this(double <i>width</i>, double <i>height</i>);
+</dt>
+<dd><p></p>
+</dd>
+<dt class="d_decl">double <a name="width"></a><span class="ddoc_psymbol">width</span>;
+</dt>
+<dd><p></p>
+</dd>
+<dt class="d_decl">double <a name="height"></a><span class="ddoc_psymbol">height</span>;
 </dt>
 <dd><p></p>
 </dd>
@@ -1240,7 +1276,7 @@ Initially the surface contents are all 0 (transparent if
 </table><p></p>
 
 </dd>
-<dt class="d_decl">static Surface <a name="createForRectangle"></a><span class="ddoc_psymbol">createForRectangle</span>(Surface <i>target</i>, Rectangle <i>rect</i>);
+<dt class="d_decl">static Surface <a name="createForRectangle"></a><span class="ddoc_psymbol">createForRectangle</span>(Surface <i>target</i>, Rectangle!(double) <i>rect</i>);
 </dt>
 <dd>Create a new surface that is a rectangle within the <i>target</i> surface.
  All operations drawn to this surface are then clipped and translated
@@ -1260,7 +1296,7 @@ The semantics of subsurfaces have not been finalized yet unless
 <p></p>
 <b>Parameters:</b><table class=parms><tr><td valign=top>Surface <i>target</i></td>
 <td valign=top>an existing surface for which the sub-surface will point to</td></tr>
-<tr><td valign=top>Rectangle <i>rect</i></td>
+<tr><td valign=top>Rectangle!(double) <i>rect</i></td>
 <td valign=top>location of the subsurface</td></tr>
 </table><p></p>
 
@@ -1322,7 +1358,7 @@ Further drawing to the surface will not affect the surface
 
 </dd>
 <dt class="d_decl">void <a name="markDirtyRectangle"></a><span class="ddoc_psymbol">markDirtyRectangle</span>(int <i>x</i>, int <i>y</i>, int <i>width</i>, int <i>height</i>);
-<br>void <a name="markDirtyRectangle"></a><span class="ddoc_psymbol">markDirtyRectangle</span>(RectangleInt <i>rect</i>);
+<br>void <a name="markDirtyRectangle"></a><span class="ddoc_psymbol">markDirtyRectangle</span>(Rectangle!(int) <i>rect</i>);
 </dt>
 <dd>Like <span class="d_inlinecode">Surface.markDirty()</span>, but drawing has been done only
  to the specified rectangle, so that cairo can retain cached
@@ -2269,7 +2305,7 @@ Note that code meant to be reusable should not call
  more robust means of temporarily restricting the clip region.<p></p>
 
 </dd>
-<dt class="d_decl">Rectangle[] <a name="copyClipRectangles"></a><span class="ddoc_psymbol">copyClipRectangles</span>();
+<dt class="d_decl">Rectangle!(double)[] <a name="copyClipRectangles"></a><span class="ddoc_psymbol">copyClipRectangles</span>();
 </dt>
 <dd>Gets the current clip region as a list of rectangles in user
  coordinates.<p></p>
@@ -2712,7 +2748,7 @@ If there is no current point before the call to <span class="d_inlinecode"><a na
 <dd>Begin a new sub-path. After this call the current point will be <i>p1</i>.<p></p>
 
 </dd>
-<dt class="d_decl">void <a name="rectangle"></a><span class="ddoc_psymbol">rectangle</span>(Rectangle <i>r</i>);
+<dt class="d_decl">void <a name="rectangle"></a><span class="ddoc_psymbol">rectangle</span>(Rectangle!(double) <i>r</i>);
 <br>void <a name="rectangle"></a><span class="ddoc_psymbol">rectangle</span>(double <i>x</i>, double <i>y</i>, double <i>width</i>, double <i>height</i>);
 </dt>
 <dd>Adds a closed sub-path <a name="rectangle"></a><span class="ddoc_psymbol">rectangle</span> of the given size to the
