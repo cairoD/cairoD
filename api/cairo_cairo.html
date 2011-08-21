@@ -137,6 +137,7 @@ Most cairoD functions could throw an OutOfMemoryError. This is therefore not
 
 </dd>
 <dt class="d_decl">struct <a name="Point"></a><span class="ddoc_psymbol">Point</span>;
+<br>struct <a name="<a name="PointInt"></a><span class="ddoc_psymbol">PointInt</span>"></a><span class="ddoc_psymbol"><a name="PointInt"></a><span class="ddoc_psymbol">PointInt</span></span>;
 </dt>
 <dd>A simple struct to store the coordinates of a point.<p></p>
 
@@ -154,57 +155,40 @@ Most cairoD functions could throw an OutOfMemoryError. This is therefore not
 </dd>
 </dl>
 </dd>
-<dt class="d_decl">struct <a name="Rectangle"></a><span class="ddoc_psymbol">Rectangle</span>(T) if (is(T == double));
+<dt class="d_decl">struct <a name="Rectangle"></a><span class="ddoc_psymbol">Rectangle</span>(T) if (is(T == double) || is(T == int));
 </dt>
-<dd>A simple struct representing a rectangle<p></p>
+<dd>A simple struct representing a rectangle with <span class="d_inlinecode">int</span> or  values<p></p>
 
-<dl><dt class="d_decl">auto this(Point <i>point</i>, double <i>width</i>, double <i>height</i>);
-<br>auto this(double <i>x</i>, double <i>y</i>, double <i>width</i>, double <i>height</i>);
+<dl><dt class="d_decl">auto this(PointType <i>point</i>, T <i>width</i>, T <i>height</i>);
+<br>auto this(T <i>x</i>, T <i>y</i>, T <i>width</i>, T <i>height</i>);
 </dt>
 <dd><p></p>
 </dd>
-<dt class="d_decl">Point <a name="point"></a><span class="ddoc_psymbol">point</span>;
+<dt class="d_decl">PointType <a name="point"></a><span class="ddoc_psymbol">point</span>;
 </dt>
 <dd>TOP-LEFT <a name="point"></a><span class="ddoc_psymbol">point</span> of the rectangle<p></p>
 
 </dd>
-<dt class="d_decl">double <a name="width"></a><span class="ddoc_psymbol">width</span>;
+<dt class="d_decl">T <a name="width"></a><span class="ddoc_psymbol">width</span>;
 </dt>
 <dd><p></p>
 </dd>
-<dt class="d_decl">double <a name="height"></a><span class="ddoc_psymbol">height</span>;
-</dt>
-<dd><p></p>
-</dd>
-</dl>
-</dd>
-<dt class="d_decl">struct <a name="Rectangle"></a><span class="ddoc_psymbol">Rectangle</span>(T) if (is(T == int));
-</dt>
-<dd>A simple struct representing a rectangle with only <span class="d_inlinecode">int</span> values<p></p>
-
-<dl><dt class="d_decl">auto this(int <i>x</i>, int <i>y</i>, int <i>width</i>, int <i>height</i>);
-</dt>
-<dd><p></p>
-</dd>
-<dt class="d_decl">int <a name="x"></a><span class="ddoc_psymbol">x</span>;
-</dt>
-<dd>TOP-LEFT point of the rectangle: X coordinate<p></p>
-
-</dd>
-<dt class="d_decl">int <a name="y"></a><span class="ddoc_psymbol">y</span>;
-</dt>
-<dd>TOP-LEFT point of the rectangle: Y coordinate<p></p>
-
-</dd>
-<dt class="d_decl">int <a name="width"></a><span class="ddoc_psymbol">width</span>;
-</dt>
-<dd><p></p>
-</dd>
-<dt class="d_decl">int <a name="height"></a><span class="ddoc_psymbol">height</span>;
+<dt class="d_decl">T <a name="height"></a><span class="ddoc_psymbol">height</span>;
 </dt>
 <dd><p></p>
 </dd>
 </dl>
+</dd>
+<dt class="d_decl">auto <a name="rectangle"></a><span class="ddoc_psymbol">rectangle</span>(T)(T <i>x</i>, T <i>y</i>, T <i>width</i>, T <i>height</i>);
+</dt>
+<dd>Convenience function to create a <span class="d_inlinecode">Rectangle!int</span> or <span class="d_inlinecode">Rectangle!double</span>
+ depending on the argument types.
+<p></p>
+<b>Examples:</b><br><pre class="d_code"> <span class="d_keyword">auto</span> a = <span class="d_psymbol">rectangle</span>(1, 1, 4, 4);
+ <span class="d_keyword">auto</span> b = <span class="d_psymbol">rectangle</span>(0.99, 0.99, 3.99, 3.99);
+</pre>
+<p></p>
+
 </dd>
 <dt class="d_decl">struct <a name="Size"></a><span class="ddoc_psymbol">Size</span>(T) if (is(T == int));
 </dt>
@@ -226,7 +210,7 @@ Most cairoD functions could throw an OutOfMemoryError. This is therefore not
 </dd>
 <dt class="d_decl">struct <a name="Size"></a><span class="ddoc_psymbol">Size</span>(T) if (is(T == double));
 </dt>
-<dd>A simple struct representing a size with only <span class="d_inlinecode">int</span> values<p></p>
+<dd>A simple struct representing a size with <span class="d_inlinecode">double</span> values<p></p>
 
 <dl><dt class="d_decl">auto this(double <i>width</i>, double <i>height</i>);
 </dt>
@@ -650,7 +634,7 @@ This class uses the <span class="d_inlinecode">CairoCountedClass</span> mixin, s
  are also available in <span class="d_inlinecode"><a name="Pattern"></a><span class="ddoc_psymbol">Pattern</span></span> classes, although they do not show
  up in the documentation because of a limitation in ddoc.<p></p>
 
-<dl><dt class="d_decl">protected void <a name="checkError"></a><span class="ddoc_psymbol">checkError</span>();
+<dl><dt class="d_decl">protected final void <a name="checkError"></a><span class="ddoc_psymbol">checkError</span>();
 </dt>
 <dd>Method for use in subclasses.
  Calls <span class="d_inlinecode">cairo_pattern_status(nativePointer)</span> and throws
@@ -1109,7 +1093,7 @@ Please refer to the documentation of each backend for additional usage
 </pre>
 <p></p>
 
-<dl><dt class="d_decl">protected void <a name="checkError"></a><span class="ddoc_psymbol">checkError</span>();
+<dl><dt class="d_decl">protected final void <a name="checkError"></a><span class="ddoc_psymbol">checkError</span>();
 </dt>
 <dd>Method for use in subclasses.
  Calls <span class="d_inlinecode">cairo_device_status(nativePointer)</span> and throws
@@ -1219,7 +1203,7 @@ A cairo surface is created by using backend-specific classes,
  you call <span class="d_inlinecode"><a name="Surface"></a><span class="ddoc_psymbol">Surface</span>.flush()</span> before reading from or writing to the
  surface and that you must use <span class="d_inlinecode"><a name="Surface"></a><span class="ddoc_psymbol">Surface</span>.markDirty()</span> after modifying it.<p></p>
 
-<dl><dt class="d_decl">protected void <a name="checkError"></a><span class="ddoc_psymbol">checkError</span>();
+<dl><dt class="d_decl">protected final void <a name="checkError"></a><span class="ddoc_psymbol">checkError</span>();
 </dt>
 <dd>Method for use in subclasses.
  Calls <span class="d_inlinecode">cairo_surface_status(nativePointer)</span> and throws
@@ -3432,7 +3416,7 @@ The first cluster always covers bytes from the beginning of
 <span class="d_inlinecode"><a name="ScaledFont"></a><span class="ddoc_psymbol">ScaledFont</span></span> represents a realization of a font face at a particular
  size and transformation and a certain set of font options.<p></p>
 
-<dl><dt class="d_decl">protected void <a name="checkError"></a><span class="ddoc_psymbol">checkError</span>();
+<dl><dt class="d_decl">protected final void <a name="checkError"></a><span class="ddoc_psymbol">checkError</span>();
 </dt>
 <dd>Method for use in subclasses.
  Calls <span class="d_inlinecode">cairo_scaled_font_status(nativePointer)</span> and throws
@@ -3627,7 +3611,7 @@ If <i>glyphBuffer</i> initially points to a non-empty array, that array is
  using the toy text API by way of <span class="d_inlinecode">Context.selectFontFace()</span>. The
  resulting face can be accessed using <span class="d_inlinecode">Context.getFontFace()</span>.<p></p>
 
-<dl><dt class="d_decl">protected void <a name="checkError"></a><span class="ddoc_psymbol">checkError</span>();
+<dl><dt class="d_decl">protected final void <a name="checkError"></a><span class="ddoc_psymbol">checkError</span>();
 </dt>
 <dd>Method for use in subclasses.
  Calls <span class="d_inlinecode">cairo_font_face_status(nativePointer)</span> and throws
