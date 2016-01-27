@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Enum cairo_operator_t</title>
+		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">cairo</a>
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">c</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../cairo/c/cairo.html" class="selected module">cairo</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/config.html" class=" module">config</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../../cairo/c.html" class=" module">c</a>
+							</li>
+							<li>
+								<a href="../../../cairo/cairo.html" class=" module">cairo</a>
+							</li>
+							<li>
+								<a href="../../../cairo/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../../cairo/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../../cairo/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../../cairo/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../../cairo/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../../cairo/util.html" class=" module">util</a>
+							</li>
+							<li>
+								<a href="../../../cairo/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../../cairo/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../../cairo/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../../cairo.html" class=" module">cairo</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Enum cairo_operator_t</h1>
+			<section>
+				<p><code class="prettyprint lang-d">cairo_operator_t</code> is used to set the compositing operator for all cairo
+ drawing operations.
+</p>
+<section><p>The default operator is <a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_OVER.html"><code class="prettyprint lang-d">CAIRO_OPERATOR_OVER</code></a>.
+</p>
+
+<p> The operators marked as <i>unbounded</i> modify their
+ destination even outside of the mask layer (that is, their effect is not
+ bound by the mask layer).  However, their effect can still be limited by
+ way of clipping.
+</p>
+
+<p> To keep things simple, the operator descriptions here
+ document the behavior for when both source and destination are either fully
+ transparent or fully opaque.  The actual implementation works for
+ translucent layers too.
+ For a more detailed explanation of the effects of each operator, including
+ the mathematical definitions, see
+ <a href="http://cairographics.org/operators/">http://cairographics.org/operators/</a>.
+</p>
+</section>
+
+					<p>The enum base type is
+						<code class="prettyprint lang-d">int</code>
+.
+					</p>
+					<section>
+						<h3>Enum members</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_ADD.html">
+										<code>CAIRO_OPERATOR_ADD</code>
+									</a>
+								</td>
+								<td>source and destination layers are accumulated
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_ATOP.html">
+										<code>CAIRO_OPERATOR_ATOP</code>
+									</a>
+								</td>
+								<td>draw source on top of destination content and only there
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_CLEAR.html">
+										<code>CAIRO_OPERATOR_CLEAR</code>
+									</a>
+								</td>
+								<td>clear destination layer (bounded)
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_COLOR_BURN.html">
+										<code>CAIRO_OPERATOR_COLOR_BURN</code>
+									</a>
+								</td>
+								<td>darkens the destination color to reflect the source color.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_COLOR_DODGE.html">
+										<code>CAIRO_OPERATOR_COLOR_DODGE</code>
+									</a>
+								</td>
+								<td>brightens the destination color to reflect the source color.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_DARKEN.html">
+										<code>CAIRO_OPERATOR_DARKEN</code>
+									</a>
+								</td>
+								<td>replaces the destination with the source if it is darker, otherwise keeps the source.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_DEST.html">
+										<code>CAIRO_OPERATOR_DEST</code>
+									</a>
+								</td>
+								<td>ignore the source
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_DEST_ATOP.html">
+										<code>CAIRO_OPERATOR_DEST_ATOP</code>
+									</a>
+								</td>
+								<td>leave destination on top of source content and only there (unbounded)
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_DEST_IN.html">
+										<code>CAIRO_OPERATOR_DEST_IN</code>
+									</a>
+								</td>
+								<td>leave destination only where there was source content (unbounded)
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_DEST_OUT.html">
+										<code>CAIRO_OPERATOR_DEST_OUT</code>
+									</a>
+								</td>
+								<td>leave destination only where there was no source content
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_DEST_OVER.html">
+										<code>CAIRO_OPERATOR_DEST_OVER</code>
+									</a>
+								</td>
+								<td>draw destination on top of source
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_DIFFERENCE.html">
+										<code>CAIRO_OPERATOR_DIFFERENCE</code>
+									</a>
+								</td>
+								<td>Takes the difference of the source and destination color.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_EXCLUSION.html">
+										<code>CAIRO_OPERATOR_EXCLUSION</code>
+									</a>
+								</td>
+								<td>Produces an effect similar to difference, but with lower contrast.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_HARD_LIGHT.html">
+										<code>CAIRO_OPERATOR_HARD_LIGHT</code>
+									</a>
+								</td>
+								<td>Multiplies or screens, dependant on source color.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_HSL_COLOR.html">
+										<code>CAIRO_OPERATOR_HSL_COLOR</code>
+									</a>
+								</td>
+								<td>Creates a color with the hue and saturation
+ of the source and the luminosity of the target. This preserves the gray
+ levels of the target and is useful for coloring monochrome images or
+ tinting color images.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_HSL_HUE.html">
+										<code>CAIRO_OPERATOR_HSL_HUE</code>
+									</a>
+								</td>
+								<td>Creates a color with the hue of the source and the saturation and luminosity of the target.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_HSL_LUMINOSITY.html">
+										<code>CAIRO_OPERATOR_HSL_LUMINOSITY</code>
+									</a>
+								</td>
+								<td>Creates a color with the luminosity of
+ the source and the hue and saturation of the target. This produces an
+ inverse effect to <a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_HSL_COLOR.html"><code class="prettyprint lang-d">CAIRO_OPERATOR_HSL_COLOR</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_HSL_SATURATION.html">
+										<code>CAIRO_OPERATOR_HSL_SATURATION</code>
+									</a>
+								</td>
+								<td>Creates a color with the saturation of the source and the hue and luminosity of the target. Painting with this mode onto a gray area prduces no change.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_IN.html">
+										<code>CAIRO_OPERATOR_IN</code>
+									</a>
+								</td>
+								<td>draw source where there was destination content (unbounded)
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_LIGHTEN.html">
+										<code>CAIRO_OPERATOR_LIGHTEN</code>
+									</a>
+								</td>
+								<td>replaces the destination with the source if it is lighter, otherwise keeps the source.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_MULTIPLY.html">
+										<code>CAIRO_OPERATOR_MULTIPLY</code>
+									</a>
+								</td>
+								<td>source and destination layers are multiplied. This causes the result to be at least as dark as the darker inputs.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_OUT.html">
+										<code>CAIRO_OPERATOR_OUT</code>
+									</a>
+								</td>
+								<td>draw source where there was no destination content (unbounded)
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_OVER.html">
+										<code>CAIRO_OPERATOR_OVER</code>
+									</a>
+								</td>
+								<td>draw source layer on top of destination layer (bounded)
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_OVERLAY.html">
+										<code>CAIRO_OPERATOR_OVERLAY</code>
+									</a>
+								</td>
+								<td>multiplies or screens, depending on the lightness of the destination color.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_SATURATE.html">
+										<code>CAIRO_OPERATOR_SATURATE</code>
+									</a>
+								</td>
+								<td>like over, but assuming source and dest are disjoint geometries
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_SCREEN.html">
+										<code>CAIRO_OPERATOR_SCREEN</code>
+									</a>
+								</td>
+								<td>source and destination are complemented and multiplied. This causes the result to be at least as light as the lighter inputs.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_SOFT_LIGHT.html">
+										<code>CAIRO_OPERATOR_SOFT_LIGHT</code>
+									</a>
+								</td>
+								<td>Darkens or lightens, dependant on source color.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_SOURCE.html">
+										<code>CAIRO_OPERATOR_SOURCE</code>
+									</a>
+								</td>
+								<td>replace destination layer (bounded)
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_operator_t.CAIRO_OPERATOR_XOR.html">
+										<code>CAIRO_OPERATOR_XOR</code>
+									</a>
+								</td>
+								<td>source and destination are shown where there is only one of them
+</td>
+							</tr>
+						</table>
+					</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><table>   <tr><td>Johannes Pfau</td> <td>cairoD</td></tr>
+   <tr><td><a href="http://cairographics.org">cairo team</a></td> <td>cairo</td></tr>
+ </table>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><table>   <tr><td>cairoD wrapper/bindings</td>
+     <td><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a></td></tr>
+   <tr><td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING">cairo</a></td>
+     <td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING-LGPL-2.1">LGPL 2.1</a> /
+     <a href="http://cgit.freedesktop.org/cairo/plain/COPYING-MPL-1.1">MPL 1.1</a></td></tr>
+ </table>
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

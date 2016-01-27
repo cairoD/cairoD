@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function Context.getCurrentPoint</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">cairo</a>
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">c</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../cairo/c/cairo.html" class=" module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/config.html" class=" module">config</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo/c.html" class=" module">c</a>
+							</li>
+							<li>
+								<a href="../../cairo/cairo.html" class="selected module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/util.html" class=" module">util</a>
+							</li>
+							<li>
+								<a href="../../cairo/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo.html" class=" module">cairo</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function Context.getCurrentPoint</h1>
+			<section>
+				<p>Gets the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> of the current path, which is conceptually
+ the final <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> reached by the path so far.
+</p>
+<section><p>The current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> is returned in the user-space coordinate system.
+ If there is no defined current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> or if cr is in an error status,
+ x and y will both be set to 0.0. It is possible to check
+ this in advance with <a href="../../cairo/cairo/Context.hasCurrentPoint.html"><code class="prettyprint lang-d">hasCurrentPoint</code></a>().
+</p>
+
+<p> Most path construction functions alter the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a>. See
+ the following for details on how they affect the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a>:
+ <a href="../../cairo/cairo/Context.newPath.html"><code class="prettyprint lang-d">newPath</code></a>(), <a href="../../cairo/cairo/Context.newSubPath.html"><code class="prettyprint lang-d">newSubPath</code></a>(), <a href="../../cairo/cairo/Context.appendPath.html"><code class="prettyprint lang-d">appendPath</code></a>(),
+ <a href="../../cairo/cairo/Context.closePath.html"><code class="prettyprint lang-d">closePath</code></a>(), <a href="../../cairo/cairo/Context.moveTo.html"><code class="prettyprint lang-d">moveTo</code></a>(), <a href="../../cairo/cairo/Context.lineTo.html"><code class="prettyprint lang-d">lineTo</code></a>(),
+ <a href="../../cairo/cairo/Context.curveTo.html"><code class="prettyprint lang-d">curveTo</code></a>(), <a href="../../cairo/cairo/Context.relMoveTo.html"><code class="prettyprint lang-d">relMoveTo</code></a>(), <a href="../../cairo/cairo/Context.relLineTo.html"><code class="prettyprint lang-d">relLineTo</code></a>(),
+ <a href="../../cairo/cairo/Context.relCurveTo.html"><code class="prettyprint lang-d">relCurveTo</code></a>(), <a href="../../cairo/cairo/Context.arc.html"><code class="prettyprint lang-d">arc</code></a>(), <a href="../../cairo/cairo/Context.arcNegative.html"><code class="prettyprint lang-d">arcNegative</code></a>(),
+ <a href="../../cairo/cairo/Context.rectangle.html"><code class="prettyprint lang-d">rectangle</code></a>(), <a href="../../cairo/cairo/Context.textPath.html"><code class="prettyprint lang-d">textPath</code></a>(), <a href="../../cairo/cairo/Context.glyphPath.html"><code class="prettyprint lang-d">glyphPath</code></a>(),
+ strokeToPath().
+</p>
+
+<p> Some functions use and alter the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> but do not
+ otherwise change current path: <a href="../../cairo/cairo/Context.showText.html"><code class="prettyprint lang-d">showText</code></a>().
+</p>
+
+<p> Some functions unset the current path and as a result,
+ current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a>: <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">fill</code></a>(), <a href="../../cairo/cairo/Context.stroke.html"><code class="prettyprint lang-d">stroke</code></a>().
+</p>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="prettyprint lang-d">
+<a href="../../cairo/cairo/Point.html">Point</a>!(double) getCurrentPoint();
+							</code>
+						</div>
+					</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><table>   <tr><td>Johannes Pfau</td> <td>cairoD</td></tr>
+   <tr><td>Andrej Mitrovic</td> <td>cairoD</td></tr>
+   <tr><td><a href="http://cairographics.org">cairo team</a></td> <td>cairo</td></tr>
+ </table>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><table>   <tr><td>cairoD wrapper/bindings</td>
+     <td><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a></td></tr>
+   <tr><td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING">cairo</a></td>
+     <td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING-LGPL-2.1">LGPL 2.1</a> /
+     <a href="http://cgit.freedesktop.org/cairo/plain/COPYING-MPL-1.1">MPL 1.1</a></td></tr>
+ </table>
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct cairo_path_data_t</title>
+		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">cairo</a>
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">c</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../cairo/c/cairo.html" class="selected module">cairo</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/config.html" class=" module">config</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../../cairo/c/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../../cairo/c.html" class=" module">c</a>
+							</li>
+							<li>
+								<a href="../../../cairo/cairo.html" class=" module">cairo</a>
+							</li>
+							<li>
+								<a href="../../../cairo/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../../cairo/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../../cairo/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../../cairo/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../../cairo/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../../cairo/util.html" class=" module">util</a>
+							</li>
+							<li>
+								<a href="../../../cairo/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../../cairo/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../../cairo/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../../cairo.html" class=" module">cairo</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct cairo_path_data_t</h1>
+			<section>
+				<p><code class="prettyprint lang-d">cairo_path_data_t</code> is used to represent the path data inside a
+ <a href="../../../cairo/c/cairo/cairo_path_t.html"><code class="prettyprint lang-d">cairo_path_t</code></a>.
+</p>
+<section><p>The data structure is designed to try to balance the demands of
+ efficiency and ease-of-use. A path is represented as an array of
+ <code class="prettyprint lang-d">cairo_path_data_t</code>, which is a union of headers and points.
+</p>
+
+<p> Each portion of the path is represented by one or more elements in
+ the array, (one <a href="../../../cairo/c/cairo/cairo_path_data_t.header.html"><code class="prettyprint lang-d">header</code></a> followed by 0 or more points). The length
+ value of the <a href="../../../cairo/c/cairo/cairo_path_data_t.header.html"><code class="prettyprint lang-d">header</code></a> is the number of array elements for the current
+ portion including the <a href="../../../cairo/c/cairo/cairo_path_data_t.header.html"><code class="prettyprint lang-d">header</code></a>, (ie. length == 1 + # of points), and
+ where the number of points for each element type is as follows:
+</p>
+
+<pre class="code"><code class="prettyprint lang-d">CAIRO_PATH_MOVE_TO:     1 <a href="../../../cairo/c/cairo/cairo_path_data_t.point.html">point</a>
+CAIRO_PATH_LINE_TO:     1 <a href="../../../cairo/c/cairo/cairo_path_data_t.point.html">point</a>
+CAIRO_PATH_CURVE_TO:    3 points
+CAIRO_PATH_CLOSE_PATH:  0 points
+</code></pre>
+
+<p> The semantics and ordering of the coordinate values are consistent
+ with <a href="../../../cairo/c/cairo/cairo_move_to.html"><code class="prettyprint lang-d">cairo_move_to</code></a>(), <a href="../../../cairo/c/cairo/cairo_line_to.html"><code class="prettyprint lang-d">cairo_line_to</code></a>(), <a href="../../../cairo/c/cairo/cairo_curve_to.html"><code class="prettyprint lang-d">cairo_curve_to</code></a>(), and
+ <a href="../../../cairo/c/cairo/cairo_close_path.html"><code class="prettyprint lang-d">cairo_close_path</code></a>().
+</p>
+</section>
+
+					<section>
+						<h3>Fields</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_path_data_t.header.html" class="public"><code>header</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../../cairo/c/cairo/PathDataHeader.html">PathDataHeader</a></code></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../cairo/c/cairo/cairo_path_data_t.point.html" class="public"><code>point</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../../cairo/c/cairo/PathDataPoint.html">PathDataPoint</a></code></td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+<section><h3>Examples</h3>
+<p>Here is sample code for iterating through a <a href="../../../cairo/c/cairo/cairo_path_t.html"><code class="prettyprint lang-d">cairo_path_t</code></a>:
+</p>
+
+<pre class="code"><code class="prettyprint lang-d">int i;
+<a href="../../../cairo/c/cairo/cairo_path_t.html">cairo_path_t</a> *path;
+cairo_path_data_t *data;
+
+path = <a href="../../../cairo/c/cairo/cairo_copy_path.html">cairo_copy_path</a> (cr);
+
+for (i=0; i &lt; path-&gt;num_data; i += path-&gt;data[i].header.length) {
+    data = &amp;amp;path-&gt;data[i];
+    switch (data-&gt;header.type) {
+    case CAIRO_PATH_MOVE_TO:
+        do_move_to_things (data[1].point.x, data[1].point.y);
+        break;
+    case CAIRO_PATH_LINE_TO:
+        do_line_to_things (data[1].point.x, data[1].point.y);
+        break;
+    case CAIRO_PATH_CURVE_TO:
+        do_curve_to_things (data[1].point.x, data[1].point.y,
+                            data[2].point.x, data[2].point.y,
+                            data[3].point.x, data[3].point.y);
+        break;
+    case CAIRO_PATH_CLOSE_PATH:
+        do_close_path_things ();
+        break;
+    }
+}
+<a href="../../../cairo/c/cairo/cairo_path_destroy.html">cairo_path_destroy</a> (path);
+</code></pre>
+
+<p> As of cairo 1.4, cairo does not mind if there are more elements in
+ a portion of the path than needed.  Such elements can be used by
+ users of the cairo API to hold extra values in the path data
+ structure.  For this reason, it is recommended that applications
+ always use data-&gt;header.length to
+ iterate over the path data, instead of hardcoding the number of
+ elements for each element type.
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><table>   <tr><td>Johannes Pfau</td> <td>cairoD</td></tr>
+   <tr><td><a href="http://cairographics.org">cairo team</a></td> <td>cairo</td></tr>
+ </table>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><table>   <tr><td>cairoD wrapper/bindings</td>
+     <td><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a></td></tr>
+   <tr><td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING">cairo</a></td>
+     <td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING-LGPL-2.1">LGPL 2.1</a> /
+     <a href="http://cgit.freedesktop.org/cairo/plain/COPYING-MPL-1.1">MPL 1.1</a></td></tr>
+ </table>
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

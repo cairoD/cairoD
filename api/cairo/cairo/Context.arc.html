@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function Context.arc</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">cairo</a>
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">c</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../cairo/c/cairo.html" class=" module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/config.html" class=" module">config</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo/c.html" class=" module">c</a>
+							</li>
+							<li>
+								<a href="../../cairo/cairo.html" class="selected module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/util.html" class=" module">util</a>
+							</li>
+							<li>
+								<a href="../../cairo/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo.html" class=" module">cairo</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function Context.arc</h1>
+			<section>
+				<p>Adds a circular <code class="prettyprint lang-d">arc</code> of the given <a href="../../cairo/cairo/Context.arc.html#radius"><code class="prettyprint lang-d">radius</code></a> to the current path.
+ The <code class="prettyprint lang-d">arc</code> is centered at <a href="../../cairo/cairo/Context.arc.html#center"><code class="prettyprint lang-d">center</code></a>, begins at <a href="../../cairo/cairo/Context.arc.html#angle1"><code class="prettyprint lang-d">angle1</code></a> and proceeds in
+ the direction of increasing angles to end at <a href="../../cairo/cairo/Context.arc.html#angle2"><code class="prettyprint lang-d">angle2</code></a>.
+ If <a href="../../cairo/cairo/Context.arc.html#angle2"><code class="prettyprint lang-d">angle2</code></a> is less than <a href="../../cairo/cairo/Context.arc.html#angle1"><code class="prettyprint lang-d">angle1</code></a> it will be progressively
+ increased by 2*PI until it is greater than <a href="../../cairo/cairo/Context.arc.html#angle1"><code class="prettyprint lang-d">angle1</code></a>.
+</p>
+<section><p>If there is a current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a>, an initial line segment will be
+ added to the path to connect the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> to the beginning
+ of the <code class="prettyprint lang-d">arc</code>. If this initial line is undesired, it can be
+ avoided by calling <a href="../../cairo/cairo/Context.newSubPath.html"><code class="prettyprint lang-d">newSubPath</code></a>() before calling <code class="prettyprint lang-d">arc</code>().
+</p>
+
+<p> Angles are measured in radians. An angle of 0.0 is in the
+ direction of the positive X axis (in user space). An angle
+ of PI/2.0 radians (90 degrees) is in the direction of the
+ positive Y axis (in user space). Angles increase in the
+ direction from the positive X axis toward the positive Y
+ axis. So with the default transformation <a href="../../cairo/cairo/Context.matrix.html"><code class="prettyprint lang-d">matrix</code></a>, angles
+ increase in a clockwise direction.
+</p>
+
+<p> (To convert from degrees to radians, use degrees * (PI / 180))
+</p>
+
+<p> This function gives the <code class="prettyprint lang-d">arc</code> in the direction of increasing angles;
+ see <a href="../../cairo/cairo/Context.arcNegative.html"><code class="prettyprint lang-d">arcNegative</code></a>() to get the <code class="prettyprint lang-d">arc</code> in the direction of decreasing angles.
+</p>
+
+<p> The <code class="prettyprint lang-d">arc</code> is circular in user space. To achieve an elliptical <code class="prettyprint lang-d">arc</code>,
+ you can <a href="../../cairo/cairo/Context.scale.html"><code class="prettyprint lang-d">scale</code></a> the current transformation <a href="../../cairo/cairo/Context.matrix.html"><code class="prettyprint lang-d">matrix</code></a> by different
+ amounts in the X and Y directions. For example, to draw an
+ ellipse in the box given by x, y, width, height:
+</p>
+<pre class="code"><code class="prettyprint lang-d">cr.save();
+cr.translate(x + width / 2, y + height / 2);
+cr.scale(width / 2, height / 2);
+cr.arc(<a href="../../cairo/cairo/Point.html">Point</a>(0, 0), 1, 0, 2 * PI);
+cr.restore();
+</code></pre>
+</section>
+
+					<section>
+						<h3>Prototypes</h3>
+						<div class="prototype">
+							<code class="prettyprint lang-d">
+void arc(
+								<br/>
+&nbsp;&nbsp;<a href="../../cairo/cairo/Point.html">Point</a>!(double) center,
+								<br/>
+&nbsp;&nbsp;double radius,
+								<br/>
+&nbsp;&nbsp;double angle1,
+								<br/>
+&nbsp;&nbsp;double angle2
+								<br/>
+);
+								<br/>
+								<br/>
+void arc(
+								<br/>
+&nbsp;&nbsp;double centerX,
+								<br/>
+&nbsp;&nbsp;double centerY,
+								<br/>
+&nbsp;&nbsp;double radius,
+								<br/>
+&nbsp;&nbsp;double angle1,
+								<br/>
+&nbsp;&nbsp;double angle2
+								<br/>
+);
+							</code>
+						</div>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="radius">radius</td><td> the <a href="../../cairo/cairo/Context.arc.html#radius"><code class="prettyprint lang-d">radius</code></a> of the <code class="prettyprint lang-d">arc</code></td></tr>
+<tr><td id="angle1">angle1</td><td> the start angle, in radians</td></tr>
+<tr><td id="angle2">angle2</td><td> the end angle, in radians</td></tr>
+</table>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><table>   <tr><td>Johannes Pfau</td> <td>cairoD</td></tr>
+   <tr><td>Andrej Mitrovic</td> <td>cairoD</td></tr>
+   <tr><td><a href="http://cairographics.org">cairo team</a></td> <td>cairo</td></tr>
+ </table>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><table>   <tr><td>cairoD wrapper/bindings</td>
+     <td><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a></td></tr>
+   <tr><td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING">cairo</a></td>
+     <td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING-LGPL-2.1">LGPL 2.1</a> /
+     <a href="http://cgit.freedesktop.org/cairo/plain/COPYING-MPL-1.1">MPL 1.1</a></td></tr>
+ </table>
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Surface.setFallbackResolution - multiple declarations</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">cairo</a>
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">c</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../cairo/c/cairo.html" class=" module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/config.html" class=" module">config</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo/c.html" class=" module">c</a>
+							</li>
+							<li>
+								<a href="../../cairo/cairo.html" class="selected module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/util.html" class=" module">util</a>
+							</li>
+							<li>
+								<a href="../../cairo/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo.html" class=" module">cairo</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Surface.setFallbackResolution - multiple declarations</h1>
+			<ul>
+				<li>Function Surface.setFallbackResolution</li>
+				<li>Function Surface.setFallbackResolution</li>
+			</ul>
+			<section>
+				<h2>Function Surface.setFallbackResolution</h2>
+				<p>Set the horizontal and vertical resolution for image fallbacks.
+</p>
+<section><p>When certain operations aren't supported natively by a backend,
+ cairo will fallback by rendering operations to an image and
+ then overlaying that image onto the output. For backends that
+ are natively vector-oriented, this function can be used to set
+ the resolution used for these image fallbacks, (larger values
+ will result in more detailed images, but also larger file sizes).
+</p>
+
+<p> Some examples of natively vector-oriented backends are the ps,
+ pdf, and svg backends.
+</p>
+
+<p> For backends that are natively raster-oriented, image fallbacks
+ are still possible, but they are always performed at the native
+ <a href="../../cairo/cairo/Surface.device.html"><code class="prettyprint lang-d">device</code></a> resolution. So this function has no effect on those backends.
+</p>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="prettyprint lang-d">
+void setFallbackResolution(
+								<br/>
+&nbsp;&nbsp;<a href="../../cairo/cairo/Resolution.html">Resolution</a> res
+								<br/>
+);
+							</code>
+						</div>
+					</section>
+<section><h3>Note</h3>
+<p>The fallback resolution only takes effect at the time of
+ completing a page (with <a href="../../cairo/cairo/Context.showPage.html"><code class="prettyprint lang-d">Context.showPage</code></a>() or <a href="../../cairo/cairo/Context.copyPage.html"><code class="prettyprint lang-d">Context.copyPage</code></a>())
+ so there is currently no way to have more than one fallback
+ resolution in effect on a single page.
+</p>
+
+<p> The default fallback resoultion is 300 pixels per inch in both
+ dimensions.
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Function Surface.setFallbackResolution</h2>
+				<p>Set the horizontal and vertical resolution for image fallbacks.
+</p>
+<section><p>When certain operations aren't supported natively by a backend,
+ cairo will fallback by rendering operations to an image and
+ then overlaying that image onto the output. For backends that
+ are natively vector-oriented, this function can be used to set
+ the resolution used for these image fallbacks, (larger values
+ will result in more detailed images, but also larger file sizes).
+</p>
+
+<p> Some examples of natively vector-oriented backends are the ps,
+ pdf, and svg backends.
+</p>
+
+<p> For backends that are natively raster-oriented, image fallbacks
+ are still possible, but they are always performed at the native
+ <a href="../../cairo/cairo/Surface.device.html"><code class="prettyprint lang-d">device</code></a> resolution. So this function has no effect on those backends.
+</p>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="prettyprint lang-d">
+void setFallbackResolution(
+								<br/>
+&nbsp;&nbsp;<a href="../../cairo/cairo/Resolution.html">Resolution</a> res
+								<br/>
+);
+							</code>
+						</div>
+					</section>
+<section><h3>Note</h3>
+<p>The fallback resolution only takes effect at the time of
+ completing a page (with <a href="../../cairo/cairo/Context.showPage.html"><code class="prettyprint lang-d">Context.showPage</code></a>() or <a href="../../cairo/cairo/Context.copyPage.html"><code class="prettyprint lang-d">Context.copyPage</code></a>())
+ so there is currently no way to have more than one fallback
+ resolution in effect on a single page.
+</p>
+
+<p> The default fallback resoultion is 300 pixels per inch in both
+ dimensions.
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><table>   <tr><td>Johannes Pfau</td> <td>cairoD</td></tr>
+   <tr><td>Andrej Mitrovic</td> <td>cairoD</td></tr>
+   <tr><td><a href="http://cairographics.org">cairo team</a></td> <td>cairo</td></tr>
+ </table>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><table>   <tr><td>cairoD wrapper/bindings</td>
+     <td><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a></td></tr>
+   <tr><td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING">cairo</a></td>
+     <td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING-LGPL-2.1">LGPL 2.1</a> /
+     <a href="http://cgit.freedesktop.org/cairo/plain/COPYING-MPL-1.1">MPL 1.1</a></td></tr>
+ </table>
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class ScaledFont</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">cairo</a>
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">c</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../cairo/c/cairo.html" class=" module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/config.html" class=" module">config</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo/c.html" class=" module">c</a>
+							</li>
+							<li>
+								<a href="../../cairo/cairo.html" class="selected module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/util.html" class=" module">util</a>
+							</li>
+							<li>
+								<a href="../../cairo/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo.html" class=" module">cairo</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Class ScaledFont</h1>
+			<section>
+				<p>Font face at particular <a href="../../cairo/cairo/size.html"><code class="prettyprint lang-d">size</code></a> and options
+</p>
+<section><p><code class="prettyprint lang-d">ScaledFont</code> represents a realization of a font face at a particular
+ <a href="../../cairo/cairo/size.html"><code class="prettyprint lang-d">size</code></a> and transformation and a certain set of font options.
+</p>
+</section>
+
+					<section>
+						<h3>Inherits from</h3>
+						<ul>
+							<li>
+								<code class="prettyprint lang-d">Object</code>
+ (base class)
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Constructors</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>Create a <a href="../../cairo/cairo/ScaledFont.html"><code class="prettyprint lang-d">ScaledFont</code></a> from a existing cairo_scaled_font_t*.
+ <a href="../../cairo/cairo/ScaledFont.html"><code class="prettyprint lang-d">ScaledFont</code></a> is a garbage collected class. It will call cairo_scaled_font_destroy
+ when it gets collected by the GC or when dispose() is called.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>Creates a <a href="../../cairo/cairo/ScaledFont.html"><code class="prettyprint lang-d">ScaledFont</code></a> object from a font face and
+ matrices that describe the <a href="../../cairo/cairo/size.html"><code class="prettyprint lang-d">size</code></a> of the font and the
+ environment in which it will be used.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.createFromNative.html" class="public">
+										<code>createFromNative</code>
+									</a>
+								</td>
+								<td>The <code class="prettyprint lang-d">createFromNative</code> method for the <a href="../../cairo/cairo/ScaledFont.html"><code class="prettyprint lang-d">ScaledFont</code></a> classes.
+ See <a href="https://github.com/jpf91/cairoD/wiki/Memory-Management#createFromNative">https://github.com/jpf91/cairoD/wiki/Memory-Management#<code class="prettyprint lang-d">createFromNative</code></a>
+ for more information.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.extents.html" class="public">
+										<code>extents</code>
+									</a>
+								</td>
+								<td>Gets the metrics for a <a href="../../cairo/cairo/ScaledFont.html"><code class="prettyprint lang-d">ScaledFont</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.getCTM.html" class="public">
+										<code>getCTM</code>
+									</a>
+								</td>
+								<td>Returns the <a href="../../cairo/cairo/ScaledFont.CTM.html"><code class="prettyprint lang-d">CTM</code></a> with which <a href="../../cairo/cairo/ScaledFont.html"><code class="prettyprint lang-d">ScaledFont</code></a> was created.
+ Note that the translation offsets (x0, y0) of the <a href="../../cairo/cairo/ScaledFont.CTM.html"><code class="prettyprint lang-d">CTM</code></a> are
+ ignored by new <a href="../../cairo/cairo/ScaledFont.html"><code class="prettyprint lang-d">ScaledFont</code></a>(). So, the matrix this function
+ returns always has 0,0 as x0,y0.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.getFontFace.html" class="public">
+										<code>getFontFace</code>
+									</a>
+								</td>
+								<td>Gets the font face that this scaled font uses. This is the
+ font face passed to new <a href="../../cairo/cairo/ScaledFont.html"><code class="prettyprint lang-d">ScaledFont</code></a>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.getFontMatrix.html" class="public">
+										<code>getFontMatrix</code>
+									</a>
+								</td>
+								<td>Returns the font matrix with which <a href="../../cairo/cairo/ScaledFont.html"><code class="prettyprint lang-d">ScaledFont</code></a>
+ was created.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.getFontOptions.html" class="public">
+										<code>getFontOptions</code>
+									</a>
+								</td>
+								<td>Returns the font options with which <a href="../../cairo/cairo/ScaledFont.html"><code class="prettyprint lang-d">ScaledFont</code></a>
+ was created.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.getScaleMatrix.html" class="public">
+										<code>getScaleMatrix</code>
+									</a>
+								</td>
+								<td>Returns the scale matrix of <a href="../../cairo/cairo/ScaledFont.html"><code class="prettyprint lang-d">ScaledFont</code></a>.
+ The scale matrix is product of the font matrix and the
+ ctm associated with the scaled font, and hence is the
+ matrix mapping from font space to device space.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.getType.html" class="public">
+										<code>getType</code>
+									</a>
+								</td>
+								<td>This function returns the C <a href="../../cairo/cairo/ScaledFont.type.html"><code class="prettyprint lang-d">type</code></a> of a <a href="../../cairo/cairo/ScaledFont.html"><code class="prettyprint lang-d">ScaledFont</code></a>. See <a href="../../cairo/cairo/FontType.html"><code class="prettyprint lang-d">FontType</code></a>
+ for available types.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.glyphExtents.html" class="public">
+										<code>glyphExtents</code>
+									</a>
+								</td>
+								<td>Gets the <a href="../../cairo/cairo/ScaledFont.extents.html"><code class="prettyprint lang-d">extents</code></a> for an array of <a href="../../cairo/cairo/ScaledFont.glyphExtents.html#glyphs"><code class="prettyprint lang-d">glyphs</code></a>. The <a href="../../cairo/cairo/ScaledFont.extents.html"><code class="prettyprint lang-d">extents</code></a> describe
+ a user-space <a href="../../cairo/cairo/rectangle.html"><code class="prettyprint lang-d">rectangle</code></a> that encloses the "inked" portion
+ of the <a href="../../cairo/cairo/ScaledFont.glyphExtents.html#glyphs"><code class="prettyprint lang-d">glyphs</code></a>, (as they would be drawn by <a href="../../cairo/cairo/Context.showGlyphs.html"><code class="prettyprint lang-d">Context.showGlyphs</code></a>()
+ if the cairo graphics state were set to the same <a href="../../cairo/cairo/ScaledFont.fontFace.html"><code class="prettyprint lang-d">fontFace</code></a>,
+ <a href="../../cairo/cairo/ScaledFont.fontMatrix.html"><code class="prettyprint lang-d">fontMatrix</code></a>, ctm, and <a href="../../cairo/cairo/ScaledFont.fontOptions.html"><code class="prettyprint lang-d">fontOptions</code></a> as scaled_font). Additionally,
+ the x_advance and y_advance values indicate the amount by
+ which the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> would be advanced by <a href="../../cairo/cairo/Context.showGlyphs.html"><code class="prettyprint lang-d">Context.showGlyphs</code></a>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.textExtents.html" class="public">
+										<code>textExtents</code>
+									</a>
+								</td>
+								<td>Gets the <a href="../../cairo/cairo/ScaledFont.extents.html"><code class="prettyprint lang-d">extents</code></a> for a string of <a href="../../cairo/cairo/ScaledFont.textExtents.html#text"><code class="prettyprint lang-d">text</code></a>. The <a href="../../cairo/cairo/ScaledFont.extents.html"><code class="prettyprint lang-d">extents</code></a> describe a
+ user-space <a href="../../cairo/cairo/rectangle.html"><code class="prettyprint lang-d">rectangle</code></a> that encloses the "inked" portion of the
+ <a href="../../cairo/cairo/ScaledFont.textExtents.html#text"><code class="prettyprint lang-d">text</code></a> drawn at the origin (0,0) (as it would be drawn by
+ <a href="../../cairo/cairo/Context.showText.html"><code class="prettyprint lang-d">Context.showText</code></a>() if the cairo graphics state were set
+ to the same <a href="../../cairo/cairo/ScaledFont.fontFace.html"><code class="prettyprint lang-d">fontFace</code></a>, <a href="../../cairo/cairo/ScaledFont.fontMatrix.html"><code class="prettyprint lang-d">fontMatrix</code></a>, ctm, and <a href="../../cairo/cairo/ScaledFont.fontOptions.html"><code class="prettyprint lang-d">fontOptions</code></a>
+ as <a href="../../cairo/cairo/ScaledFont.html"><code class="prettyprint lang-d">ScaledFont</code></a>). Additionally, the x_advance and y_advance
+ values indicate the amount by which the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> would
+ be advanced by <a href="../../cairo/cairo/Context.showText.html"><code class="prettyprint lang-d">Context.showText</code></a>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.textToGlyphs.html" class="public">
+										<code>textToGlyphs</code>
+									</a>
+								</td>
+								<td>Converts UTF-8 <a href="../../cairo/cairo/ScaledFont.textToGlyphs.html#text"><code class="prettyprint lang-d">text</code></a> to an array of glyphs, optionally with
+ cluster mapping, that can be used to render later using <a href="../../cairo/cairo/ScaledFont.html"><code class="prettyprint lang-d">ScaledFont</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.textToTextGlyph.html" class="public">
+										<code>textToTextGlyph</code>
+									</a>
+								</td>
+								<td>Converts UTF-8 <a href="../../cairo/cairo/ScaledFont.textToTextGlyph.html#text"><code class="prettyprint lang-d">text</code></a> to an array of glyphs, optionally with
+ cluster mapping, that can be used to render later using <a href="../../cairo/cairo/ScaledFont.html"><code class="prettyprint lang-d">ScaledFont</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.checkError.html" class="protected">
+										<code>checkError</code>
+									</a>
+								</td>
+								<td>Method for use in subclasses.
+ Calls cairo_scaled_font_status(nativePointer) and throws
+ an exception if the status isn't CAIRO_STATUS_SUCCESS
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Aliases</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.CTM.html" class="public">
+										<code>CTM</code>
+									</a>
+								</td>
+								<td>convenience alias
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.fontFace.html" class="public">
+										<code>fontFace</code>
+									</a>
+								</td>
+								<td>convenience alias
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.fontMatrix.html" class="public">
+										<code>fontMatrix</code>
+									</a>
+								</td>
+								<td>convenience alias
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.fontOptions.html" class="public">
+										<code>fontOptions</code>
+									</a>
+								</td>
+								<td>convenience alias
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.scaleMatrix.html" class="public">
+										<code>scaleMatrix</code>
+									</a>
+								</td>
+								<td>convenience alias
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.type.html" class="public">
+										<code>type</code>
+									</a>
+								</td>
+								<td>convenience alias
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Templates</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/ScaledFont.CairoCountedClass!(cairo_scaled_font_t*, &quot;cairo_scaled_font_&quot;).html" class="public">
+										<code>CairoCountedClass!(cairo_scaled_font_t*, "cairo_scaled_font_")</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><table>   <tr><td>Johannes Pfau</td> <td>cairoD</td></tr>
+   <tr><td>Andrej Mitrovic</td> <td>cairoD</td></tr>
+   <tr><td><a href="http://cairographics.org">cairo team</a></td> <td>cairo</td></tr>
+ </table>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><table>   <tr><td>cairoD wrapper/bindings</td>
+     <td><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a></td></tr>
+   <tr><td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING">cairo</a></td>
+     <td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING-LGPL-2.1">LGPL 2.1</a> /
+     <a href="http://cgit.freedesktop.org/cairo/plain/COPYING-MPL-1.1">MPL 1.1</a></td></tr>
+ </table>
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

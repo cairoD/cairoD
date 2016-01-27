@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct Matrix</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">cairo</a>
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">c</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../cairo/c/cairo.html" class=" module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/config.html" class=" module">config</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo/c.html" class=" module">c</a>
+							</li>
+							<li>
+								<a href="../../cairo/cairo.html" class="selected module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/util.html" class=" module">util</a>
+							</li>
+							<li>
+								<a href="../../cairo/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo.html" class=" module">cairo</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct Matrix</h1>
+			<section>
+				<p>Wrapper for cairo's cairo_matrix_t.
+ A cairo_matrix_t holds an affine transformation, such as a <a href="../../cairo/cairo/Matrix.scale.html"><code class="prettyprint lang-d">scale</code></a>,
+ rotation, shear, or a combination of those. The transformation of
+ a <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> (x, y) is given by:
+</p>
+<section><pre class="code"><code class="prettyprint lang-d">x_new = xx * x + xy * y + x0;
+y_new = yx * x + yy * y + y0;
+</code></pre>
+</section>
+
+					<section>
+						<h3>Constructors</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Matrix.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>Sets matrix to be the affine transformation given by <a href="../../cairo/cairo/Matrix.this.html#xx"><code class="prettyprint lang-d">xx</code></a>, <a href="../../cairo/cairo/Matrix.this.html#yx"><code class="prettyprint lang-d">yx</code></a>, <a href="../../cairo/cairo/Matrix.this.html#xy"><code class="prettyprint lang-d">xy</code></a>, <a href="../../cairo/cairo/Matrix.this.html#yy"><code class="prettyprint lang-d">yy</code></a>, <a href="../../cairo/cairo/Matrix.this.html#x0"><code class="prettyprint lang-d">x0</code></a>, <a href="../../cairo/cairo/Matrix.this.html#y0"><code class="prettyprint lang-d">y0</code></a>.
+ The transformation is given by:
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Fields</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Matrix.nativeMatrix.html" class="public"><code>nativeMatrix</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/c/cairo/cairo_matrix_t.html">cairo_matrix_t</a></code></td>
+								<td>Cairo's cairo_matrix_t struct
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Matrix.initIdentity.html" class="public">
+										<code>initIdentity</code>
+									</a>
+								</td>
+								<td>Modifies matrix to be an identity transformation.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Matrix.initRotate.html" class="public">
+										<code>initRotate</code>
+									</a>
+								</td>
+								<td>Initialized matrix to a transformation that rotates by <a href="../../cairo/cairo/Matrix.initRotate.html#radians"><code class="prettyprint lang-d">radians</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Matrix.initScale.html" class="public">
+										<code>initScale</code>
+									</a>
+								</td>
+								<td>nitializes matrix to a transformation that scales by <a href="../../cairo/cairo/Matrix.initScale.html#sx"><code class="prettyprint lang-d">sx</code></a> and <a href="../../cairo/cairo/Matrix.initScale.html#sy"><code class="prettyprint lang-d">sy</code></a>
+ in the X and Y dimensions, respectively.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Matrix.initTranslate.html" class="public">
+										<code>initTranslate</code>
+									</a>
+								</td>
+								<td>Initializes matrix to a transformation that translates by <a href="../../cairo/cairo/Matrix.initTranslate.html#tx"><code class="prettyprint lang-d">tx</code></a>
+ and <a href="../../cairo/cairo/Matrix.initTranslate.html#ty"><code class="prettyprint lang-d">ty</code></a> in the X and Y dimensions, respectively.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Matrix.invert.html" class="public">
+										<code>invert</code>
+									</a>
+								</td>
+								<td>Changes matrix to be the inverse of its original value.
+ Not all transformation matrices have inverses; if the matrix
+ collapses points together (it is degenerate), then it has no
+ inverse and this function will fail.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Matrix.opBinary.html" class="public">
+										<code>opBinary</code>
+									</a>
+								</td>
+								<td>Multiplies the affine transformations in a and b together and
+ returns the result. The effect of the resulting transformation
+ is to first apply the transformation in a to the coordinates
+ and then apply the transformation in b to the coordinates.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Matrix.rotate.html" class="public">
+										<code>rotate</code>
+									</a>
+								</td>
+								<td>Applies rotation by <a href="../../cairo/cairo/Matrix.rotate.html#radians"><code class="prettyprint lang-d">radians</code></a> to the transformation in matrix.
+ The effect of the new transformation is to first <code class="prettyprint lang-d">rotate</code> the
+ coordinates by <a href="../../cairo/cairo/Matrix.rotate.html#radians"><code class="prettyprint lang-d">radians</code></a>, then apply the original transformation
+ to the coordinates.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Matrix.scale.html" class="public">
+										<code>scale</code>
+									</a>
+								</td>
+								<td>Applies scaling by <a href="../../cairo/cairo/Matrix.scale.html#sx"><code class="prettyprint lang-d">sx</code></a>, <a href="../../cairo/cairo/Matrix.scale.html#sy"><code class="prettyprint lang-d">sy</code></a> to the transformation in matrix.
+ The effect of the new transformation is to first <code class="prettyprint lang-d">scale</code> the
+ coordinates by <a href="../../cairo/cairo/Matrix.scale.html#sx"><code class="prettyprint lang-d">sx</code></a> and <a href="../../cairo/cairo/Matrix.scale.html#sy"><code class="prettyprint lang-d">sy</code></a>, then apply the original transformation
+ to the coordinates.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Matrix.transformDistance.html" class="public">
+										<code>transformDistance</code>
+									</a>
+								</td>
+								<td>Transforms the distance vector (dx,dy) by matrix. This is similar
+ to <a href="../../cairo/cairo/Matrix.transformPoint.html"><code class="prettyprint lang-d">transformPoint</code></a> except that the translation
+ components of the transformation are ignored. The calculation
+ of the returned vector is as follows:
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Matrix.transformPoint.html" class="public">
+										<code>transformPoint</code>
+									</a>
+								</td>
+								<td>Transforms the <a href="../../cairo/cairo/Matrix.transformPoint.html#point"><code class="prettyprint lang-d">point</code></a> (x, y) by matrix.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Matrix.translate.html" class="public">
+										<code>translate</code>
+									</a>
+								</td>
+								<td>Applies a translation by <a href="../../cairo/cairo/Matrix.translate.html#tx"><code class="prettyprint lang-d">tx</code></a>, <a href="../../cairo/cairo/Matrix.translate.html#ty"><code class="prettyprint lang-d">ty</code></a> to the transformation in matrix.
+ The effect of the new transformation is to first <code class="prettyprint lang-d">translate</code> the
+ coordinates by <a href="../../cairo/cairo/Matrix.translate.html#tx"><code class="prettyprint lang-d">tx</code></a> and <a href="../../cairo/cairo/Matrix.translate.html#ty"><code class="prettyprint lang-d">ty</code></a>, then apply the original transformation
+ to the coordinates.
+</td>
+							</tr>
+						</table>
+					</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><table>   <tr><td>Johannes Pfau</td> <td>cairoD</td></tr>
+   <tr><td>Andrej Mitrovic</td> <td>cairoD</td></tr>
+   <tr><td><a href="http://cairographics.org">cairo team</a></td> <td>cairo</td></tr>
+ </table>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><table>   <tr><td>cairoD wrapper/bindings</td>
+     <td><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a></td></tr>
+   <tr><td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING">cairo</a></td>
+     <td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING-LGPL-2.1">LGPL 2.1</a> /
+     <a href="http://cgit.freedesktop.org/cairo/plain/COPYING-MPL-1.1">MPL 1.1</a></td></tr>
+ </table>
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

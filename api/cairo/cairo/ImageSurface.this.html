@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>ImageSurface.this - multiple declarations</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">cairo</a>
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">c</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../cairo/c/cairo.html" class=" module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/config.html" class=" module">config</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo/c.html" class=" module">c</a>
+							</li>
+							<li>
+								<a href="../../cairo/cairo.html" class="selected module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/util.html" class=" module">util</a>
+							</li>
+							<li>
+								<a href="../../cairo/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo.html" class=" module">cairo</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>ImageSurface.this - multiple declarations</h1>
+			<ul>
+				<li>Function ImageSurface.this</li>
+				<li>Function ImageSurface.this</li>
+				<li>Function ImageSurface.this</li>
+			</ul>
+			<section>
+				<h2>Function ImageSurface.this</h2>
+				<p>Create a <a href="../../cairo/cairo/ImageSurface.html"><code class="prettyprint lang-d">ImageSurface</code></a> from a existing cairo_surface_t*.
+ <a href="../../cairo/cairo/ImageSurface.html"><code class="prettyprint lang-d">ImageSurface</code></a> is a garbage collected class. It will call cairo_surface_destroy
+ when it gets collected by the GC or when dispose() is called.
+</p>
+<section></section>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="prettyprint lang-d">
+this(
+								<br/>
+&nbsp;&nbsp;<a href="../../cairo/c/cairo/cairo_surface_t.html">cairo_surface_t</a>* ptr
+								<br/>
+);
+							</code>
+						</div>
+					</section>
+<section><h3>Warning</h3>
+<p><a href="../../cairo/cairo/ImageSurface.this.html#ptr"><code class="prettyprint lang-d">ptr</code></a>'s reference count is not increased by this function!
+ Adjust reference count before calling it if necessary
+</p>
+
+<p> <font color=red>Only use this if you know what your doing!
+ This function should not be needed for standard cairoD usage.</font>
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Function ImageSurface.this</h2>
+				<p>Creates an image surface of the specified <a href="../../cairo/cairo/ImageSurface.this.html#format"><code class="prettyprint lang-d">format</code></a> and dimensions.
+ Initially the surface contents are all 0. (Specifically, within
+ each pixel, each color or alpha channel belonging to <a href="../../cairo/cairo/ImageSurface.this.html#format"><code class="prettyprint lang-d">format</code></a> will
+ be 0. The contents of bits within a pixel, but not belonging
+ to the given <a href="../../cairo/cairo/ImageSurface.this.html#format"><code class="prettyprint lang-d">format</code></a> are undefined).
+</p>
+<section></section>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="prettyprint lang-d">
+this(
+								<br/>
+&nbsp;&nbsp;<a href="../../cairo/c/cairo/cairo_format_t.html">cairo_format_t</a> format,
+								<br/>
+&nbsp;&nbsp;int width,
+								<br/>
+&nbsp;&nbsp;int height
+								<br/>
+);
+							</code>
+						</div>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="format">format</td><td> <a href="../../cairo/cairo/ImageSurface.this.html#format"><code class="prettyprint lang-d">format</code></a> of pixels in the surface to create</td></tr>
+<tr><td id="width">width</td><td> <a href="../../cairo/cairo/ImageSurface.this.html#width"><code class="prettyprint lang-d">width</code></a> of the surface, in pixels</td></tr>
+<tr><td id="height">height</td><td> <a href="../../cairo/cairo/ImageSurface.this.html#height"><code class="prettyprint lang-d">height</code></a> of the surface, in pixels</td></tr>
+</table>
+</section>
+
+			</section>
+			<section>
+				<h2>Function ImageSurface.this</h2>
+				<p>Creates an image surface for the provided pixel <a href="../../cairo/cairo/ImageSurface.this.html#data"><code class="prettyprint lang-d">data</code></a>.
+ <font color=red>The output buffer must be kept around until the <a href="../../cairo/cairo/Surface.html"><code class="prettyprint lang-d">Surface</code></a>
+ is destroyed or <a href="../../cairo/cairo/Surface.finish.html"><code class="prettyprint lang-d">Surface.finish</code></a>() is called on the surface.</font>
+ The initial contents of <a href="../../cairo/cairo/ImageSurface.this.html#data"><code class="prettyprint lang-d">data</code></a> will be used as the initial image
+ contents; you must explicitly clear the buffer, using, for
+ example, <a href="../../cairo/cairo/Context.rectangle.html"><code class="prettyprint lang-d">Context.rectangle</code></a>() and <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">Context.fill</code></a>() if you
+ want it cleared.
+</p>
+<section><p>Note that the <a href="../../cairo/cairo/ImageSurface.this.html#stride"><code class="prettyprint lang-d">stride</code></a> may be larger than <a href="../../cairo/cairo/ImageSurface.this.html#width"><code class="prettyprint lang-d">width</code></a>*bytes_per_pixel
+ to provide proper alignment for each pixel and row.
+ This alignment is required to allow high-performance rendering
+ within cairo. The correct way to obtain a legal <a href="../../cairo/cairo/ImageSurface.this.html#stride"><code class="prettyprint lang-d">stride</code></a> value is
+ to call <a href="../../cairo/cairo/formatStrideForWidth.html"><code class="prettyprint lang-d">formatStrideForWidth</code></a> with the desired <a href="../../cairo/cairo/ImageSurface.this.html#format"><code class="prettyprint lang-d">format</code></a> and
+ maximum image <a href="../../cairo/cairo/ImageSurface.this.html#width"><code class="prettyprint lang-d">width</code></a> value, and then use the resulting <a href="../../cairo/cairo/ImageSurface.this.html#stride"><code class="prettyprint lang-d">stride</code></a>
+ value to allocate the <a href="../../cairo/cairo/ImageSurface.this.html#data"><code class="prettyprint lang-d">data</code></a> and to create the image surface.
+ See <a href="../../cairo/cairo/formatStrideForWidth.html"><code class="prettyprint lang-d">formatStrideForWidth</code></a> for example code.
+</p>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="prettyprint lang-d">
+this(
+								<br/>
+&nbsp;&nbsp;ubyte[] data,
+								<br/>
+&nbsp;&nbsp;<a href="../../cairo/c/cairo/cairo_format_t.html">cairo_format_t</a> format,
+								<br/>
+&nbsp;&nbsp;int width,
+								<br/>
+&nbsp;&nbsp;int height,
+								<br/>
+&nbsp;&nbsp;int stride
+								<br/>
+);
+							</code>
+						</div>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="data">data</td><td> a pointer to a buffer supplied by the application in
+     which to write contents. This pointer must be suitably aligned
+     for any kind of variable, (for example, a pointer returned by malloc).</td></tr>
+<tr><td id="format">format</td><td> the <a href="../../cairo/cairo/ImageSurface.this.html#format"><code class="prettyprint lang-d">format</code></a> of pixels in the buffer</td></tr>
+<tr><td id="width">width</td><td> the <a href="../../cairo/cairo/ImageSurface.this.html#width"><code class="prettyprint lang-d">width</code></a> of the image to be stored in the buffer</td></tr>
+<tr><td id="height">height</td><td> the <a href="../../cairo/cairo/ImageSurface.this.html#height"><code class="prettyprint lang-d">height</code></a> of the image to be stored in the buffer</td></tr>
+<tr><td id="stride">stride</td><td> the number of bytes between the start of rows in the
+     buffer as allocated. This value should always be computed
+     by <a href="../../cairo/cairo/formatStrideForWidth.html"><code class="prettyprint lang-d">formatStrideForWidth</code></a> before allocating
+     the <a href="../../cairo/cairo/ImageSurface.this.html#data"><code class="prettyprint lang-d">data</code></a> buffer.</td></tr>
+</table>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><table>   <tr><td>Johannes Pfau</td> <td>cairoD</td></tr>
+   <tr><td>Andrej Mitrovic</td> <td>cairoD</td></tr>
+   <tr><td><a href="http://cairographics.org">cairo team</a></td> <td>cairo</td></tr>
+ </table>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><table>   <tr><td>cairoD wrapper/bindings</td>
+     <td><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a></td></tr>
+   <tr><td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING">cairo</a></td>
+     <td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING-LGPL-2.1">LGPL 2.1</a> /
+     <a href="http://cgit.freedesktop.org/cairo/plain/COPYING-MPL-1.1">MPL 1.1</a></td></tr>
+ </table>
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

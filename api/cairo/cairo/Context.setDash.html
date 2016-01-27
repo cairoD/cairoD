@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function Context.setDash</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">cairo</a>
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">c</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../cairo/c/cairo.html" class=" module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/config.html" class=" module">config</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo/c.html" class=" module">c</a>
+							</li>
+							<li>
+								<a href="../../cairo/cairo.html" class="selected module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/util.html" class=" module">util</a>
+							</li>
+							<li>
+								<a href="../../cairo/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo.html" class=" module">cairo</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function Context.setDash</h1>
+			<section>
+				<p>Sets the dash pattern to be used by <a href="../../cairo/cairo/Context.stroke.html"><code class="prettyprint lang-d">stroke</code></a>(). A dash
+ pattern is specified by <a href="../../cairo/cairo/Context.setDash.html#dashes"><code class="prettyprint lang-d">dashes</code></a>, an array of positive values.
+ Each value provides the length of alternate "on" and
+ "off" portions of the <a href="../../cairo/cairo/Context.stroke.html"><code class="prettyprint lang-d">stroke</code></a>. The <a href="../../cairo/cairo/Context.setDash.html#offset"><code class="prettyprint lang-d">offset</code></a> specifies an <a href="../../cairo/cairo/Context.setDash.html#offset"><code class="prettyprint lang-d">offset</code></a>
+ into the pattern at which the <a href="../../cairo/cairo/Context.stroke.html"><code class="prettyprint lang-d">stroke</code></a> begins.
+</p>
+<section><p>Each "on" segment will have caps applied as if the segment
+ were a separate sub-path. In particular, it is valid to use
+ an "on" length of 0.0 with CAIRO_LINE_CAP_ROUND or
+ CAIRO_LINE_CAP_SQUARE in order to distributed dots
+ or squares along a path.
+</p>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="prettyprint lang-d">
+void setDash(
+								<br/>
+&nbsp;&nbsp;const(double[]) dashes,
+								<br/>
+&nbsp;&nbsp;double offset
+								<br/>
+);
+							</code>
+						</div>
+					</section>
+<section><h3>Note</h3>
+<p>The length values are in user-space units as
+ evaluated at the time of stroking. This is not necessarily
+ the same as the user space at the time of <code class="prettyprint lang-d">setDash</code>().
+</p>
+
+<p> If <a href="../../cairo/cairo/Context.setDash.html#dashes"><code class="prettyprint lang-d">dashes</code></a> is empty dashing is disabled.
+</p>
+
+<p> If dashes.length is 1 a symmetric pattern is assumed with alternating
+ on and off portions of the <a href="../../cairo/cairo/size.html"><code class="prettyprint lang-d">size</code></a> specified by the single value
+ in <a href="../../cairo/cairo/Context.setDash.html#dashes"><code class="prettyprint lang-d">dashes</code></a>.
+</p>
+
+<p> If any value in <a href="../../cairo/cairo/Context.setDash.html#dashes"><code class="prettyprint lang-d">dashes</code></a> is negative, or if all values are 0, then
+ cr will be put into an error state with a
+ status of CAIRO_STATUS_INVALID_DASH.
+</p>
+</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="dashes">dashes</td><td> an array specifying alternate lengths of on and off <a href="../../cairo/cairo/Context.stroke.html"><code class="prettyprint lang-d">stroke</code></a> portions</td></tr>
+<tr><td id="offset">offset</td><td> an <a href="../../cairo/cairo/Context.setDash.html#offset"><code class="prettyprint lang-d">offset</code></a> into the dash pattern at which the <a href="../../cairo/cairo/Context.stroke.html"><code class="prettyprint lang-d">stroke</code></a> should start</td></tr>
+</table>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><table>   <tr><td>Johannes Pfau</td> <td>cairoD</td></tr>
+   <tr><td>Andrej Mitrovic</td> <td>cairoD</td></tr>
+   <tr><td><a href="http://cairographics.org">cairo team</a></td> <td>cairo</td></tr>
+ </table>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><table>   <tr><td>cairoD wrapper/bindings</td>
+     <td><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a></td></tr>
+   <tr><td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING">cairo</a></td>
+     <td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING-LGPL-2.1">LGPL 2.1</a> /
+     <a href="http://cgit.freedesktop.org/cairo/plain/COPYING-MPL-1.1">MPL 1.1</a></td></tr>
+ </table>
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

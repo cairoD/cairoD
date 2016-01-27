@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct FontOptions</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">cairo</a>
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">c</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../cairo/c/cairo.html" class=" module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/config.html" class=" module">config</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo/c.html" class=" module">c</a>
+							</li>
+							<li>
+								<a href="../../cairo/cairo.html" class="selected module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/util.html" class=" module">util</a>
+							</li>
+							<li>
+								<a href="../../cairo/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo.html" class=" module">cairo</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct FontOptions</h1>
+			<section>
+				<p><code class="prettyprint lang-d">FontOptions</code> - How a font should be rendered
+</p>
+<section><p>The font options specify how fonts should be rendered. Most of the
+ time the font options implied by a surface are just right and do
+ not need any changes, but for pixel-based targets tweaking font
+ options may result in superior output on a particular display.
+</p>
+</section>
+
+					<section>
+						<h3>Constructors</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>Create <a href="../../cairo/cairo/FontOptions.html"><code class="prettyprint lang-d">FontOptions</code></a> from a existing cairo_font_options_t*.
+ <a href="../../cairo/cairo/FontOptions.html"><code class="prettyprint lang-d">FontOptions</code></a> is a reference counted struct. It will call
+ cairo_font_options_destroy when it's reference count is 0.
+ See <a href="https://github.com/jpf91/cairoD/wiki/Memory-Management#2.2-structs">https://github.com/jpf91/cairoD/wiki/Memory-Management#2.2-structs</a>
+ for more information.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Fields</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions._data.html" class="private"><code>_data</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">std.<wbr/>typecons.<wbr/>__T10RefCountedTS5cairo5cairo11FontOptions7PayloadVE3std8typecons24RefCountedAutoInitializei0Z.<wbr/>RefCounted</code></td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Properties</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.antiAlias.html" class="public property"><code>antiAlias</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/c/cairo/cairo_antialias_t.html">cairo_antialias_t</a></code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.debugging.html" class="public property"><code>debugging</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
+								<td>Enable / disable memory management <code class="prettyprint lang-d">debugging</code> for this <a href="../../cairo/cairo/FontOptions.html"><code class="prettyprint lang-d">FontOptions</code></a>
+ instance. Only available if both cairoD and the cairoD user
+ code were compiled with "debug=RefCounted"
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.hintMetrics.html" class="public property"><code>hintMetrics</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/c/cairo/cairo_hint_metrics_t.html">cairo_hint_metrics_t</a></code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.hintStyle.html" class="public property"><code>hintStyle</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/c/cairo/cairo_hint_style_t.html">cairo_hint_style_t</a></code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.nativePointer.html" class="public property"><code>nativePointer</code></a>
+									<span class="tableEntryAnnotation">[get]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/c/cairo/cairo_font_options_t.html">cairo_font_options_t</a>*</code></td>
+								<td>The underlying cairo_font_options_t* handle
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.copy.html" class="public">
+										<code>copy</code>
+									</a>
+								</td>
+								<td>Allocates a new font options object copying the option values
+ from original.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.create.html" class="public">
+										<code>create</code>
+									</a>
+								</td>
+								<td>Allocates a new font options object with all
+ options initialized to default values.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.getAntiAlias.html" class="public">
+										<code>getAntiAlias</code>
+									</a>
+								</td>
+								<td>Gets the antialiasing mode for the font options object.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.getHintMetrics.html" class="public">
+										<code>getHintMetrics</code>
+									</a>
+								</td>
+								<td>Gets the metrics hinting mode for the font options object.
+ See the documentation for <a href="../../cairo/cairo/HintMetrics.html"><code class="prettyprint lang-d">HintMetrics</code></a> for full details.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.getHintStyle.html" class="public">
+										<code>getHintStyle</code>
+									</a>
+								</td>
+								<td>Gets the hint style for font outlines for the font options object.
+ See the documentation for <a href="../../cairo/cairo/HintStyle.html"><code class="prettyprint lang-d">HintStyle</code></a> for full details.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.getSubpixelOrder.html" class="public">
+										<code>getSubpixelOrder</code>
+									</a>
+								</td>
+								<td>Gets the subpixel order for the font options object.
+ See the documentation for <a href="../../cairo/cairo/SubpixelOrder.html"><code class="prettyprint lang-d">SubpixelOrder</code></a> for full details.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.merge.html" class="public">
+										<code>merge</code>
+									</a>
+								</td>
+								<td>Merges non-default options from <a href="../../cairo/cairo/FontOptions.merge.html#other"><code class="prettyprint lang-d">other</code></a> into this object,
+ replacing existing values. This operation can be thought
+ of as somewhat similar to compositing <a href="../../cairo/cairo/FontOptions.merge.html#other"><code class="prettyprint lang-d">other</code></a> onto options
+ with the operation of CAIRO_OPERATION_OVER.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.opAssign.html" class="public">
+										<code>opAssign</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.opEquals.html" class="public">
+										<code>opEquals</code>
+									</a>
+								</td>
+								<td>Compares two font options objects for equality.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.setAntiAlias.html" class="public">
+										<code>setAntiAlias</code>
+									</a>
+								</td>
+								<td>Sets the antialiasing mode for the font options object. This
+ specifies the type of antialiasing to do when rendering text.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.setHintMetrics.html" class="public">
+										<code>setHintMetrics</code>
+									</a>
+								</td>
+								<td>Sets the <a href="../../cairo/cairo/FontOptions.setHintMetrics.html#metrics"><code class="prettyprint lang-d">metrics</code></a> hinting mode for the font options object.
+ This controls whether <a href="../../cairo/cairo/FontOptions.setHintMetrics.html#metrics"><code class="prettyprint lang-d">metrics</code></a> are quantized to integer
+ values in device units. See the documentation for
+ <a href="../../cairo/cairo/HintMetrics.html"><code class="prettyprint lang-d">HintMetrics</code></a> for full details.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.setHintStyle.html" class="public">
+										<code>setHintStyle</code>
+									</a>
+								</td>
+								<td>Sets the hint <a href="../../cairo/cairo/FontOptions.setHintStyle.html#style"><code class="prettyprint lang-d">style</code></a> for font outlines for the font options object.
+ This controls whether to fit font outlines to the pixel grid,
+ and if so, whether to optimize for fidelity or contrast.
+ See the documentation for <a href="../../cairo/cairo/HintStyle.html"><code class="prettyprint lang-d">HintStyle</code></a> for full details.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.setSubpixelOrder.html" class="public">
+										<code>setSubpixelOrder</code>
+									</a>
+								</td>
+								<td>Sets the subpixel <a href="../../cairo/cairo/FontOptions.setSubpixelOrder.html#order"><code class="prettyprint lang-d">order</code></a> for the font options object.
+ The subpixel <a href="../../cairo/cairo/FontOptions.setSubpixelOrder.html#order"><code class="prettyprint lang-d">order</code></a> specifies the <a href="../../cairo/cairo/FontOptions.setSubpixelOrder.html#order"><code class="prettyprint lang-d">order</code></a> of color elements
+ within each pixel on the display device when rendering with
+ an antialiasing mode of CAIRO_ANTIALIAS_SUBPIXEL.
+ See the documentation for <a href="../../cairo/cairo/SubpixelOrder.html"><code class="prettyprint lang-d">SubpixelOrder</code></a> for full details.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.toHash.html" class="public">
+										<code>toHash</code>
+									</a>
+								</td>
+								<td>Compute a hash for the font options object; this value
+ will be useful when storing an object containing a
+ <a href="../../cairo/cairo/FontOptions.html"><code class="prettyprint lang-d">FontOptions</code></a> in a hash table.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.checkError.html" class="protected">
+										<code>checkError</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Inner structs</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.Payload.html" class="private">
+										<code>Payload</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Aliases</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.subpixelOrder.html" class="public">
+										<code>subpixelOrder</code>
+									</a>
+								</td>
+								<td>convenience alias
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/FontOptions.Data.html" class="private">
+										<code>Data</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+<section><h3>Warning</h3>
+<p>Instances must be created with the <a href="../../cairo/cairo/FontOptions.create.html"><code class="prettyprint lang-d">create</code></a> static member function!
+</p>
+<pre class="code"><code class="prettyprint lang-d">auto options = <a href="../../cairo/cairo/FontOptions.create.html">FontOptions.create</a>(); //Correct
+options.toHash();
+</code></pre>
+
+<pre class="code"><code class="prettyprint lang-d">FontOptions options; //Wrong
+options.toHash();
+</code></pre>
+
+<pre class="code"><code class="prettyprint lang-d">FontOptions options;
+options = <a href="../../cairo/cairo/FontOptions.create.html">FontOptions.create</a>(); //Correct
+options.toHash();
+</code></pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><table>   <tr><td>Johannes Pfau</td> <td>cairoD</td></tr>
+   <tr><td>Andrej Mitrovic</td> <td>cairoD</td></tr>
+   <tr><td><a href="http://cairographics.org">cairo team</a></td> <td>cairo</td></tr>
+ </table>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><table>   <tr><td>cairoD wrapper/bindings</td>
+     <td><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a></td></tr>
+   <tr><td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING">cairo</a></td>
+     <td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING-LGPL-2.1">LGPL 2.1</a> /
+     <a href="http://cgit.freedesktop.org/cairo/plain/COPYING-MPL-1.1">MPL 1.1</a></td></tr>
+ </table>
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

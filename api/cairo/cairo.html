@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module cairo.cairo</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">cairo</a>
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">c</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../cairo/c/cairo.html" class=" module">cairo</a>
+							</li>
+							<li>
+								<a href="../cairo/c/config.html" class=" module">config</a>
+							</li>
+							<li>
+								<a href="../cairo/c/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../cairo/c/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../cairo/c/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../cairo/c/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../cairo/c/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../cairo/c/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../cairo/c/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../cairo/c/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../cairo/c.html" class=" module">c</a>
+							</li>
+							<li>
+								<a href="../cairo/cairo.html" class="selected module">cairo</a>
+							</li>
+							<li>
+								<a href="../cairo/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../cairo/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../cairo/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../cairo/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../cairo/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../cairo/util.html" class=" module">util</a>
+							</li>
+							<li>
+								<a href="../cairo/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../cairo/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../cairo/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../cairo.html" class=" module">cairo</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Module cairo.cairo</h1>
+			<p>This module contains wrappers for most of cairo's fuctionality.
+ Additional wrappers for subsets of cairo are available in the
+ cairo.* modules.
+</p>
+<section></section>
+
+			<section><section><h2>Note</h2>
+<p>Most cairoD functions could throw an OutOfMemoryError. This is therefore not
+ explicitly stated in the functions' api documenation.
+</p>
+</section>
+<section><h2>See Also</h2>
+<p><a href="http://cairographics.org/documentation/">http://cairographics.org/documentation/</a>
+</p>
+</section>
+</section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="formatStrideForWidth" class="public" href="../cairo/cairo/formatStrideForWidth.html">
+								<code>formatStrideForWidth</code>
+							</a>
+						</td>
+						<td>This function provides a stride value that will respect all alignment
+ requirements of the accelerated image-rendering code within cairo.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="point" class="public" href="../cairo/cairo/point.html">
+								<code>point</code>
+							</a>
+						</td>
+						<td>Convenience function to create a <a href="../cairo/cairo/Point.html"><code class="prettyprint lang-d">Point</code></a>!int or <a href="../cairo/cairo/Point.html"><code class="prettyprint lang-d">Point</code></a>!double.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="rectangle" class="public" href="../cairo/cairo/rectangle.html">
+								<code>rectangle</code>
+							</a>
+						</td>
+						<td>Convenience function to create a <a href="../cairo/cairo/Rectangle.html"><code class="prettyprint lang-d">Rectangle</code></a>!int or <a href="../cairo/cairo/Rectangle.html"><code class="prettyprint lang-d">Rectangle</code></a>!double.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="size" class="public" href="../cairo/cairo/size.html">
+								<code>size</code>
+							</a>
+						</td>
+						<td>Convenience function to create a <a href="../cairo/cairo/Size.html"><code class="prettyprint lang-d">Size</code></a>!int or <a href="../cairo/cairo/Size.html"><code class="prettyprint lang-d">Size</code></a>!double.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="throwError" class="public" href="../cairo/cairo/throwError.html">
+								<code>throwError</code>
+							</a>
+						</td>
+						<td>Mainly used internally by cairoD.
+ If <a href="../cairo/cairo/throwError.html#status"><code class="prettyprint lang-d">status</code></a> is CAIRO_STATUS_NO_MEMORY a OutOfMemoryError is thrown.
+ If <a href="../cairo/cairo/throwError.html#status"><code class="prettyprint lang-d">status</code></a> is  CAIRO_STATUS_SUCCESS nothing happens.
+ For all other statuses, this functions throws
+ a <a href="../cairo/cairo/CairoException.html"><code class="prettyprint lang-d">CairoException</code></a> with the <a href="../cairo/cairo/throwError.html#status"><code class="prettyprint lang-d">status</code></a> value.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="toCairoCount" class="private" href="../cairo/cairo/toCairoCount.html">
+								<code>toCairoCount</code>
+							</a>
+						</td>
+						<td>Convert a size_t as given from a D arrays .length property
+ to a cairo count type (int).
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Classes</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="CairoException" class="public" href="../cairo/cairo/CairoException.html">
+								<code>CairoException</code>
+							</a>
+						</td>
+						<td>Exception thrown by cairoD if an error occurs.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Device" class="public" href="../cairo/cairo/Device.html">
+								<code>Device</code>
+							</a>
+						</td>
+						<td>Devices are the abstraction Cairo employs for the rendering system used
+ by a <a href="../cairo/cairo/Surface.html"><code class="prettyprint lang-d">Surface</code></a>. You can get the device of a surface using
+ <a href="../cairo/cairo/Surface.getDevice.html"><code class="prettyprint lang-d">Surface.getDevice</code></a>().
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FontFace" class="public" href="../cairo/cairo/FontFace.html">
+								<code>FontFace</code>
+							</a>
+						</td>
+						<td>Base class for font faces
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Gradient" class="public" href="../cairo/cairo/Gradient.html">
+								<code>Gradient</code>
+							</a>
+						</td>
+						<td>Base class for <a href="../cairo/cairo/LinearGradient.html"><code class="prettyprint lang-d">LinearGradient</code></a> and <a href="../cairo/cairo/RadialGradient.html"><code class="prettyprint lang-d">RadialGradient</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ImageSurface" class="public" href="../cairo/cairo/ImageSurface.html">
+								<code>ImageSurface</code>
+							</a>
+						</td>
+						<td>Image Surfaces — Rendering to memory buffers
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="LinearGradient" class="public" href="../cairo/cairo/LinearGradient.html">
+								<code>LinearGradient</code>
+							</a>
+						</td>
+						<td>A linear gradient.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Pattern" class="public" href="../cairo/cairo/Pattern.html">
+								<code>Pattern</code>
+							</a>
+						</td>
+						<td>A <code class="prettyprint lang-d">Pattern</code> represents a source when drawing onto a
+ <a href="../cairo/cairo/Surface.html"><code class="prettyprint lang-d">Surface</code></a>. There are different subtypes of <code class="prettyprint lang-d">Pattern</code>,
+ for different types of sources; for example,
+ <a href="../cairo/cairo/SolidPattern.fromRGB.html"><code class="prettyprint lang-d">SolidPattern.fromRGB</code></a> creates a pattern for a solid
+ opaque color.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="RadialGradient" class="public" href="../cairo/cairo/RadialGradient.html">
+								<code>RadialGradient</code>
+							</a>
+						</td>
+						<td>A radial gradient.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ScaledFont" class="public" href="../cairo/cairo/ScaledFont.html">
+								<code>ScaledFont</code>
+							</a>
+						</td>
+						<td>Font face at particular <a href="../cairo/cairo/size.html"><code class="prettyprint lang-d">size</code></a> and options
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="SolidPattern" class="public" href="../cairo/cairo/SolidPattern.html">
+								<code>SolidPattern</code>
+							</a>
+						</td>
+						<td>A solid pattern.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Surface" class="public" href="../cairo/cairo/Surface.html">
+								<code>Surface</code>
+							</a>
+						</td>
+						<td><code class="prettyprint lang-d">Surface</code> is the abstract <a href="../cairo/cairo/Surface.type.html"><code class="prettyprint lang-d">type</code></a> representing all different drawing targets
+ that cairo can render to. The actual drawings are performed using a cairo context.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="SurfacePattern" class="public" href="../cairo/cairo/SurfacePattern.html">
+								<code>SurfacePattern</code>
+							</a>
+						</td>
+						<td>A <a href="../cairo/cairo/SurfacePattern.surface.html"><code class="prettyprint lang-d">surface</code></a> pattern.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ToyFontFace" class="public" href="../cairo/cairo/ToyFontFace.html">
+								<code>ToyFontFace</code>
+							</a>
+						</td>
+						<td>Cairo toy font api's <a href="../cairo/cairo/FontFace.html"><code class="prettyprint lang-d">FontFace</code></a>
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="Box" class="public" href="../cairo/cairo/Box.html">
+								<code>Box</code>
+							</a>
+						</td>
+						<td>A simple struct representing a box.
+ Used for Extents.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ClipRange" class="public" href="../cairo/cairo/ClipRange.html">
+								<code>ClipRange</code>
+							</a>
+						</td>
+						<td>RandomAccessRange to iterate or index into Clips of a Cairo <a href="../cairo/cairo/Region.html"><code class="prettyprint lang-d">Region</code></a>.
+ This range keeps a reference to its <a href="../cairo/cairo/Region.html"><code class="prettyprint lang-d">Region</code></a> object,
+ so it can be passed around without thinking about memory management.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Context" class="public" href="../cairo/cairo/Context.html">
+								<code>Context</code>
+							</a>
+						</td>
+						<td>The cairo drawing context
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FontOptions" class="public" href="../cairo/cairo/FontOptions.html">
+								<code>FontOptions</code>
+							</a>
+						</td>
+						<td><code class="prettyprint lang-d">FontOptions</code> - How a font should be rendered
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Matrix" class="public" href="../cairo/cairo/Matrix.html">
+								<code>Matrix</code>
+							</a>
+						</td>
+						<td>Wrapper for cairo's cairo_matrix_t.
+ A cairo_matrix_t holds an affine transformation, such as a <a href="../cairo/cairo/Matrix.scale.html"><code class="prettyprint lang-d">scale</code></a>,
+ rotation, shear, or a combination of those. The transformation of
+ a <a href="../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> (x, y) is given by:
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Path" class="public" href="../cairo/cairo/Path.html">
+								<code>Path</code>
+							</a>
+						</td>
+						<td>Reference counted wrapper around cairo_path_t.
+ This struct can only be obtained from cairoD. It cannot be created
+ manually.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="PathElement" class="public" href="../cairo/cairo/PathElement.html">
+								<code>PathElement</code>
+							</a>
+						</td>
+						<td>An element of a cairo <a href="../cairo/cairo/Path.html"><code class="prettyprint lang-d">Path</code></a> and the objects iterated by a
+ <a href="../cairo/cairo/PathRange.html"><code class="prettyprint lang-d">PathRange</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="PathRange" class="public" href="../cairo/cairo/PathRange.html">
+								<code>PathRange</code>
+							</a>
+						</td>
+						<td>ForwardRange to iterate a cairo <a href="../cairo/cairo/PathRange.path.html"><code class="prettyprint lang-d">path</code></a>.
+ This range keeps a reference to its <a href="../cairo/cairo/Path.html"><code class="prettyprint lang-d">Path</code></a> object,
+ so it can be passed around without thinking about memory management.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Point" class="public" href="../cairo/cairo/Point.html">
+								<code>Point</code>
+							</a>
+						</td>
+						<td>A simple struct to store the coordinates of a <a href="../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> as
+ doubles or integers.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Rectangle" class="public" href="../cairo/cairo/Rectangle.html">
+								<code>Rectangle</code>
+							</a>
+						</td>
+						<td>A simple struct representing a <a href="../cairo/cairo/rectangle.html"><code class="prettyprint lang-d">rectangle</code></a> with int or double values
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Region" class="public" href="../cairo/cairo/Region.html">
+								<code>Region</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Resolution" class="public" href="../cairo/cairo/Resolution.html">
+								<code>Resolution</code>
+							</a>
+						</td>
+						<td>A simple struct representing a resolution
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="RGB" class="public" href="../cairo/cairo/RGB.html">
+								<code>RGB</code>
+							</a>
+						</td>
+						<td>Struct representing a <code class="prettyprint lang-d">RGB</code> color
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="RGBA" class="public" href="../cairo/cairo/RGBA.html">
+								<code>RGBA</code>
+							</a>
+						</td>
+						<td>Struct representing a <code class="prettyprint lang-d">RGBA</code> color
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Size" class="public" href="../cairo/cairo/Size.html">
+								<code>Size</code>
+							</a>
+						</td>
+						<td>A simple struct representing a <a href="../cairo/cairo/size.html"><code class="prettyprint lang-d">size</code></a> with only int or double values
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="TextGlyph" class="public" href="../cairo/cairo/TextGlyph.html">
+								<code>TextGlyph</code>
+							</a>
+						</td>
+						<td>The mapping between utf8 and <a href="../cairo/cairo/TextGlyph.glyphs.html"><code class="prettyprint lang-d">glyphs</code></a> is provided by an array
+ of clusters. Each <a href="../cairo/cairo/TextGlyph.cluster.html"><code class="prettyprint lang-d">cluster</code></a> covers a number of <a href="../cairo/cairo/TextGlyph.text.html"><code class="prettyprint lang-d">text</code></a> bytes and
+ <a href="../cairo/cairo/TextGlyph.glyphs.html"><code class="prettyprint lang-d">glyphs</code></a>, and neighboring clusters cover neighboring areas of
+ utf8 and <a href="../cairo/cairo/TextGlyph.glyphs.html"><code class="prettyprint lang-d">glyphs</code></a>. The clusters should collectively cover
+ utf8 and <a href="../cairo/cairo/TextGlyph.glyphs.html"><code class="prettyprint lang-d">glyphs</code></a> in entirety.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Version" class="public" href="../cairo/cairo/Version.html">
+								<code>Version</code>
+							</a>
+						</td>
+						<td>Cairo version information
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="AntiAlias" class="public" href="../cairo/cairo/AntiAlias.html">
+								<code>AntiAlias</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_antialias_t.html">cairo_antialias_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Content" class="public" href="../cairo/cairo/Content.html">
+								<code>Content</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_content_t.html">cairo_content_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="DeviceType" class="public" href="../cairo/cairo/DeviceType.html">
+								<code>DeviceType</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_device_type_t.html">cairo_device_type_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Extend" class="public" href="../cairo/cairo/Extend.html">
+								<code>Extend</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_extend_t.html">cairo_extend_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FillRule" class="public" href="../cairo/cairo/FillRule.html">
+								<code>FillRule</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_fill_rule_t.html">cairo_fill_rule_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Filter" class="public" href="../cairo/cairo/Filter.html">
+								<code>Filter</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_filter_t.html">cairo_filter_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FontExtents" class="public" href="../cairo/cairo/FontExtents.html">
+								<code>FontExtents</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_font_extents_t.html">cairo_font_extents_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FontSlant" class="public" href="../cairo/cairo/FontSlant.html">
+								<code>FontSlant</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_font_slant_t.html">cairo_font_slant_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FontType" class="public" href="../cairo/cairo/FontType.html">
+								<code>FontType</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_font_type_t.html">cairo_font_type_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FontWeight" class="public" href="../cairo/cairo/FontWeight.html">
+								<code>FontWeight</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_font_weight_t.html">cairo_font_weight_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Format" class="public" href="../cairo/cairo/Format.html">
+								<code>Format</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_format_t.html">cairo_format_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Glyph" class="public" href="../cairo/cairo/Glyph.html">
+								<code>Glyph</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_glyph_t.html">cairo_glyph_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="HintMetrics" class="public" href="../cairo/cairo/HintMetrics.html">
+								<code>HintMetrics</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_hint_metrics_t.html">cairo_hint_metrics_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="HintStyle" class="public" href="../cairo/cairo/HintStyle.html">
+								<code>HintStyle</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_hint_style_t.html">cairo_hint_style_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="LineCap" class="public" href="../cairo/cairo/LineCap.html">
+								<code>LineCap</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_line_cap_t.html">cairo_line_cap_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="LineJoin" class="public" href="../cairo/cairo/LineJoin.html">
+								<code>LineJoin</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_line_join_t.html">cairo_line_join_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Operator" class="public" href="../cairo/cairo/Operator.html">
+								<code>Operator</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_operator_t.html">cairo_operator_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="PathElementType" class="public" href="../cairo/cairo/PathElementType.html">
+								<code>PathElementType</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_path_data_type_t.html">cairo_path_data_type_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="PatternType" class="public" href="../cairo/cairo/PatternType.html">
+								<code>PatternType</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_pattern_type_t.html">cairo_pattern_type_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="RegionOverlap" class="public" href="../cairo/cairo/RegionOverlap.html">
+								<code>RegionOverlap</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_region_overlap_t.html">cairo_region_overlap_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="SubpixelOrder" class="public" href="../cairo/cairo/SubpixelOrder.html">
+								<code>SubpixelOrder</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_subpixel_order_t.html">cairo_subpixel_order_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="SurfaceType" class="public" href="../cairo/cairo/SurfaceType.html">
+								<code>SurfaceType</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_surface_type_t.html">cairo_surface_type_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="TextCluster" class="public" href="../cairo/cairo/TextCluster.html">
+								<code>TextCluster</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_text_cluster_t.html">cairo_text_cluster_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="TextClusterFlags" class="public" href="../cairo/cairo/TextClusterFlags.html">
+								<code>TextClusterFlags</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_text_cluster_flags_t.html">cairo_text_cluster_flags_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="TextExtents" class="public" href="../cairo/cairo/TextExtents.html">
+								<code>TextExtents</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d"><a href="../cairo/c/cairo/cairo_text_extents_t.html">cairo_text_extents_t</a></code>
+						</td>
+						<td>Aliases for simple cairo enums and structs.
+ Theses aliases provide D-like names when
+ using the cairoD API.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><table>   <tr><td>Johannes Pfau</td> <td>cairoD</td></tr>
+   <tr><td>Andrej Mitrovic</td> <td>cairoD</td></tr>
+   <tr><td><a href="http://cairographics.org">cairo team</a></td> <td>cairo</td></tr>
+ </table>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><table>   <tr><td>cairoD wrapper/bindings</td>
+     <td><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a></td></tr>
+   <tr><td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING">cairo</a></td>
+     <td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING-LGPL-2.1">LGPL 2.1</a> /
+     <a href="http://cgit.freedesktop.org/cairo/plain/COPYING-MPL-1.1">MPL 1.1</a></td></tr>
+ </table>
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

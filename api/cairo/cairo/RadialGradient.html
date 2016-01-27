@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class RadialGradient</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">cairo</a>
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">c</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../cairo/c/cairo.html" class=" module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/config.html" class=" module">config</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo/c.html" class=" module">c</a>
+							</li>
+							<li>
+								<a href="../../cairo/cairo.html" class="selected module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/util.html" class=" module">util</a>
+							</li>
+							<li>
+								<a href="../../cairo/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo.html" class=" module">cairo</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Class RadialGradient</h1>
+			<section>
+				<p>A radial gradient.
+</p>
+<section><p>Use the this(<a href="../../cairo/cairo/Point.html"><code class="prettyprint lang-d">Point</code></a>!double c0, double radius0, <a href="../../cairo/cairo/Point.html"><code class="prettyprint lang-d">Point</code></a>!double c1, double radius1)
+ constructor to create an instance.
+</p>
+</section>
+
+					<section>
+						<h3>Inherits from</h3>
+						<ul>
+							<li>
+								<code class="prettyprint lang-d"><a href="../../cairo/cairo/Gradient.html">Gradient</a></code>
+ (base class)
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Constructors</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/RadialGradient.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>Create a <a href="../../cairo/cairo/RadialGradient.html"><code class="prettyprint lang-d">RadialGradient</code></a> from a existing cairo_pattern_t*.
+ <a href="../../cairo/cairo/RadialGradient.html"><code class="prettyprint lang-d">RadialGradient</code></a> is a garbage collected class. It will call cairo_pattern_destroy
+ when it gets collected by the GC or when dispose() is called.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/RadialGradient.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>Creates a new radial gradient pattern between the two
+ circles defined by (<a href="../../cairo/cairo/RadialGradient.this.html#c0"><code class="prettyprint lang-d">c0</code></a>, <a href="../../cairo/cairo/RadialGradient.this.html#radius0"><code class="prettyprint lang-d">radius0</code></a>) and (<a href="../../cairo/cairo/RadialGradient.this.html#c1"><code class="prettyprint lang-d">c1</code></a>, <a href="../../cairo/cairo/RadialGradient.this.html#radius1"><code class="prettyprint lang-d">radius1</code></a>). Before
+ using the gradient pattern, a number of color stops should
+ be defined using Pattern.addColorStopRGB() or
+ Pattern.addColorStopRGBA().
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Properties</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Pattern.matrix.html" class="public inherited property"><code>matrix</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/cairo/Matrix.html">Matrix</a></code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Pattern.type.html" class="public inherited property"><code>type</code></a>
+									<span class="tableEntryAnnotation">[get]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/c/cairo/cairo_pattern_type_t.html">cairo_pattern_type_t</a></code></td>
+								<td>Convenience property
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/RadialGradient.getRadialCircles.html" class="public">
+										<code>getRadialCircles</code>
+									</a>
+								</td>
+								<td>Gets the gradient endpoint circles for a radial gradient,
+ each specified as a center coordinate and a radius.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Gradient.addColorStopRGB.html" class="public inherited">
+										<code>addColorStopRGB</code>
+									</a>
+								</td>
+								<td>Adds an opaque <a href="../../cairo/cairo/Gradient.addColorStopRGB.html#color"><code class="prettyprint lang-d">color</code></a> stop to a gradient pattern. The <a href="../../cairo/cairo/Gradient.addColorStopRGB.html#offset"><code class="prettyprint lang-d">offset</code></a>
+ specifies the location along the gradient's control vector.
+ For example, a <a href="../../cairo/cairo/LinearGradient.html"><code class="prettyprint lang-d">LinearGradient</code></a>'s control vector is from
+ (x0,y0) to (x1,y1) while a <a href="../../cairo/cairo/RadialGradient.html"><code class="prettyprint lang-d">RadialGradient</code></a>'s control vector is
+ from any <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> on the start circle to the corresponding <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a>
+ on the end circle.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Gradient.addColorStopRGBA.html" class="public inherited">
+										<code>addColorStopRGBA</code>
+									</a>
+								</td>
+								<td>Adds a translucent <a href="../../cairo/cairo/Gradient.addColorStopRGBA.html#color"><code class="prettyprint lang-d">color</code></a> stop to a gradient pattern. The <a href="../../cairo/cairo/Gradient.addColorStopRGBA.html#offset"><code class="prettyprint lang-d">offset</code></a>
+ specifies the location along the gradient's control vector. For
+ example, a linear gradient's control vector is from (x0,y0) to
+ (x1,y1) while a radial gradient's control vector is from any <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a>
+ on the start circle to the corresponding <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> on the end circle.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Pattern.createFromNative.html" class="public inherited">
+										<code>createFromNative</code>
+									</a>
+								</td>
+								<td>The <a href="../../cairo/cairo/Pattern.createFromNative.html"><code class="prettyprint lang-d">createFromNative</code></a> method for the <a href="../../cairo/cairo/Pattern.html"><code class="prettyprint lang-d">Pattern</code></a> classes.
+ See <a href="https://github.com/jpf91/cairoD/wiki/Memory-Management#createFromNative">https://github.com/jpf91/cairoD/wiki/Memory-Management#<a href="../../cairo/cairo/Pattern.createFromNative.html"><code class="prettyprint lang-d">createFromNative</code></a></a>
+ for more information.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Pattern.filter.html" class="public inherited">
+										<code>filter</code>
+									</a>
+								</td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Gradient.getColorStopCount.html" class="public inherited">
+										<code>getColorStopCount</code>
+									</a>
+								</td>
+								<td>Gets the number of color stops specified in the given gradient pattern.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Gradient.getColorStopRGBA.html" class="public inherited">
+										<code>getColorStopRGBA</code>
+									</a>
+								</td>
+								<td>Gets the <a href="../../cairo/cairo/Gradient.getColorStopRGBA.html#color"><code class="prettyprint lang-d">color</code></a> and <a href="../../cairo/cairo/Gradient.getColorStopRGBA.html#offset"><code class="prettyprint lang-d">offset</code></a> information at the given <a href="../../cairo/cairo/Gradient.getColorStopRGBA.html#index"><code class="prettyprint lang-d">index</code></a> for a
+ gradient pattern. Values of <a href="../../cairo/cairo/Gradient.getColorStopRGBA.html#index"><code class="prettyprint lang-d">index</code></a> are 0 to 1 less than the number
+ returned by <a href="../../cairo/cairo/Gradient.getColorStopCount.html"><code class="prettyprint lang-d">getColorStopCount</code></a>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Pattern.getExtend.html" class="public inherited">
+										<code>getExtend</code>
+									</a>
+								</td>
+								<td>Gets the current extend mode for a pattern. See <a href="../../cairo/cairo/Extend.html"><code class="prettyprint lang-d">Extend</code></a>
+ for details on the semantics of each extend strategy.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Pattern.getFilter.html" class="public inherited">
+										<code>getFilter</code>
+									</a>
+								</td>
+								<td>Gets the current <a href="../../cairo/cairo/Pattern.filter.html"><code class="prettyprint lang-d">filter</code></a> for a pattern. See <a href="../../cairo/cairo/Filter.html"><code class="prettyprint lang-d">Filter</code></a> for details on each <a href="../../cairo/cairo/Pattern.filter.html"><code class="prettyprint lang-d">filter</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Pattern.getMatrix.html" class="public inherited">
+										<code>getMatrix</code>
+									</a>
+								</td>
+								<td>Returns the pattern's transformation <a href="../../cairo/cairo/Pattern.matrix.html"><code class="prettyprint lang-d">matrix</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Pattern.getType.html" class="public inherited">
+										<code>getType</code>
+									</a>
+								</td>
+								<td>This function returns the C <a href="../../cairo/cairo/Pattern.type.html"><code class="prettyprint lang-d">type</code></a> of a pattern. See <a href="../../cairo/cairo/PatternType.html"><code class="prettyprint lang-d">PatternType</code></a>
+ for available types.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Pattern.setExtend.html" class="public inherited">
+										<code>setExtend</code>
+									</a>
+								</td>
+								<td>Sets the mode to be used for drawing outside the area of a pattern.
+ See <a href="../../cairo/cairo/Extend.html"><code class="prettyprint lang-d">Extend</code></a> for details on the semantics of each extend strategy.
+ The default extend mode is CAIRO_EXTEND_NONE for surface patterns
+ and CAIRO_EXTEND_PAD for gradient patterns.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Pattern.setFilter.html" class="public inherited">
+										<code>setFilter</code>
+									</a>
+								</td>
+								<td>Sets the <a href="../../cairo/cairo/Pattern.filter.html"><code class="prettyprint lang-d">filter</code></a> to be used for resizing when using this pattern.
+ See <a href="../../cairo/cairo/Filter.html"><code class="prettyprint lang-d">Filter</code></a> for details on each <a href="../../cairo/cairo/Pattern.filter.html"><code class="prettyprint lang-d">filter</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Pattern.setMatrix.html" class="public inherited">
+										<code>setMatrix</code>
+									</a>
+								</td>
+								<td>Sets the pattern's transformation <a href="../../cairo/cairo/Pattern.matrix.html"><code class="prettyprint lang-d">matrix</code></a> to <a href="../../cairo/cairo/Pattern.matrix.html"><code class="prettyprint lang-d">matrix</code></a>.
+ This <a href="../../cairo/cairo/Pattern.matrix.html"><code class="prettyprint lang-d">matrix</code></a> is a transformation from user space to pattern space.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Pattern.checkError.html" class="protected inherited">
+										<code>checkError</code>
+									</a>
+								</td>
+								<td>Method for use in subclasses.
+ Calls cairo_pattern_status(nativePointer) and throws
+ an exception if the status isn't CAIRO_STATUS_SUCCESS
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Aliases</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Gradient.colorStopCount.html" class="public inherited">
+										<code>colorStopCount</code>
+									</a>
+								</td>
+								<td>Convenience alias
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Templates</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Pattern.CairoCountedClass!(cairo_pattern_t*, &quot;cairo_pattern_&quot;).html" class="public inherited">
+										<code>CairoCountedClass!(cairo_pattern_t*, "cairo_pattern_")</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><table>   <tr><td>Johannes Pfau</td> <td>cairoD</td></tr>
+   <tr><td>Andrej Mitrovic</td> <td>cairoD</td></tr>
+   <tr><td><a href="http://cairographics.org">cairo team</a></td> <td>cairo</td></tr>
+ </table>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><table>   <tr><td>cairoD wrapper/bindings</td>
+     <td><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a></td></tr>
+   <tr><td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING">cairo</a></td>
+     <td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING-LGPL-2.1">LGPL 2.1</a> /
+     <a href="http://cgit.freedesktop.org/cairo/plain/COPYING-MPL-1.1">MPL 1.1</a></td></tr>
+ </table>
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

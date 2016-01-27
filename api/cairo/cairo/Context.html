@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct Context</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">cairo</a>
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">c</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../cairo/c/cairo.html" class=" module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/config.html" class=" module">config</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/c/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo/c.html" class=" module">c</a>
+							</li>
+							<li>
+								<a href="../../cairo/cairo.html" class="selected module">cairo</a>
+							</li>
+							<li>
+								<a href="../../cairo/directfb.html" class=" module">directfb</a>
+							</li>
+							<li>
+								<a href="../../cairo/ft.html" class=" module">ft</a>
+							</li>
+							<li>
+								<a href="../../cairo/pdf.html" class=" module">pdf</a>
+							</li>
+							<li>
+								<a href="../../cairo/ps.html" class=" module">ps</a>
+							</li>
+							<li>
+								<a href="../../cairo/svg.html" class=" module">svg</a>
+							</li>
+							<li>
+								<a href="../../cairo/util.html" class=" module">util</a>
+							</li>
+							<li>
+								<a href="../../cairo/win32.html" class=" module">win32</a>
+							</li>
+							<li>
+								<a href="../../cairo/xcb.html" class=" module">xcb</a>
+							</li>
+							<li>
+								<a href="../../cairo/xlib.html" class=" module">xlib</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../cairo.html" class=" module">cairo</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct Context</h1>
+			<section>
+				<p>The cairo drawing context
+</p>
+<section><p><code class="prettyprint lang-d">Context</code> is the main object used when drawing with cairo. To draw
+ with cairo, you create a <code class="prettyprint lang-d">Context</code>, set the <a href="../../cairo/cairo/Context.target.html"><code class="prettyprint lang-d">target</code></a> surface, and drawing
+ options for the <code class="prettyprint lang-d">Context</code>, create shapes with functions like <a href="../../cairo/cairo/Context.moveTo.html"><code class="prettyprint lang-d">Context.moveTo</code></a>()
+ and <a href="../../cairo/cairo/Context.lineTo.html"><code class="prettyprint lang-d">Context.lineTo</code></a>(), and then draw shapes with <a href="../../cairo/cairo/Context.stroke.html"><code class="prettyprint lang-d">Context.stroke</code></a>()
+ or <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">Context.fill</code></a>().
+</p>
+
+<p> <code class="prettyprint lang-d">Context</code>'s can be pushed to a stack via <a href="../../cairo/cairo/Context.save.html"><code class="prettyprint lang-d">Context.save</code></a>().
+ They may then safely be changed, without loosing the current state.
+ Use <a href="../../cairo/cairo/Context.restore.html"><code class="prettyprint lang-d">Context.restore</code></a>() to <a href="../../cairo/cairo/Context.restore.html"><code class="prettyprint lang-d">restore</code></a> to the saved state.
+</p>
+</section>
+
+					<section>
+						<h3>Constructors</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>Create a <a href="../../cairo/cairo/Context.html"><code class="prettyprint lang-d">Context</code></a> from a existing cairo_t*.
+ <a href="../../cairo/cairo/Context.html"><code class="prettyprint lang-d">Context</code></a> is a garbage collected class. It will call cairo_destroy
+ when it gets collected by the GC or when <a href="../../cairo/cairo/Context.dispose.html"><code class="prettyprint lang-d">dispose</code></a>() is called.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>Creates a new <a href="../../cairo/cairo/Context.html"><code class="prettyprint lang-d">Context</code></a> with all graphics state parameters set
+ to default values and with <a href="../../cairo/cairo/Context.this.html#target"><code class="prettyprint lang-d">target</code></a> as a <a href="../../cairo/cairo/Context.this.html#target"><code class="prettyprint lang-d">target</code></a> surface. The
+ <a href="../../cairo/cairo/Context.this.html#target"><code class="prettyprint lang-d">target</code></a> surface should be constructed with a backend-specific
+ function such as new <a href="../../cairo/cairo/ImageSurface.html"><code class="prettyprint lang-d">ImageSurface</code></a>().
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Fields</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.debugging.html" class="public"><code>debugging</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
+								<td>Enable / disable memory management <code class="prettyprint lang-d">debugging</code> for this <a href="../../cairo/cairo/Context.html"><code class="prettyprint lang-d">Context</code></a>
+ instance. Only available if both cairoD and the cairoD user
+ code were compiled with "debug=RefCounted"
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.nativePointer.html" class="public"><code>nativePointer</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/c/cairo/cairo_t.html">cairo_t</a>*</code></td>
+								<td>The underlying cairo_t* handle
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Properties</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.antiAlias.html" class="public property"><code>antiAlias</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/c/cairo/cairo_antialias_t.html">cairo_antialias_t</a></code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.fillRule.html" class="public property"><code>fillRule</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/c/cairo/cairo_fill_rule_t.html">cairo_fill_rule_t</a></code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.fontFace.html" class="public property"><code>fontFace</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/cairo/FontFace.html">FontFace</a></code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.fontMatrix.html" class="public property"><code>fontMatrix</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/cairo/Matrix.html">Matrix</a></code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.fontOptions.html" class="public property"><code>fontOptions</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/cairo/FontOptions.html">FontOptions</a></code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.lineCap.html" class="public property"><code>lineCap</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/c/cairo/cairo_line_cap_t.html">cairo_line_cap_t</a></code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.lineJoin.html" class="public property"><code>lineJoin</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/c/cairo/cairo_line_join_t.html">cairo_line_join_t</a></code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.lineWidth.html" class="public property"><code>lineWidth</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.matrix.html" class="public property"><code>matrix</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">const(<a href="../../cairo/cairo/Matrix.html">Matrix</a>)</code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.miterLimit.html" class="public property"><code>miterLimit</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.operator.html" class="public property"><code>operator</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/c/cairo/cairo_operator_t.html">cairo_operator_t</a></code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.scaledFont.html" class="public property"><code>scaledFont</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/cairo/ScaledFont.html">ScaledFont</a></code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.source.html" class="public property"><code>source</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../cairo/cairo/Pattern.html">Pattern</a></code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.tolerance.html" class="public property"><code>tolerance</code></a>
+									<span class="tableEntryAnnotation">[get, set]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td>Convenience property
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context._count.html" class="protected property"><code>_count</code></a>
+									<span class="tableEntryAnnotation">[get]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">uint</code></td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.appendPath.html" class="public">
+										<code>appendPath</code>
+									</a>
+								</td>
+								<td><code class="prettyprint lang-d">appendPath</code> for user created paths. There is no high level API
+ for user defined paths. Use <code class="prettyprint lang-d">appendPath</code>(<a href="../../cairo/cairo/Path.html"><code class="prettyprint lang-d">Path</code></a> p) for paths
+ which were obtained from cairo.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.appendPath.html" class="public">
+										<code>appendPath</code>
+									</a>
+								</td>
+								<td>Append the path onto the current path. The path may be
+ the return value from one of <a href="../../cairo/cairo/Context.copyPath.html"><code class="prettyprint lang-d">copyPath</code></a>() or <a href="../../cairo/cairo/Context.copyPathFlat.html"><code class="prettyprint lang-d">copyPathFlat</code></a>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.arc.html" class="public">
+										<code>arc</code>
+									</a>
+								</td>
+								<td>Adds a circular <code class="prettyprint lang-d">arc</code> of the given <a href="../../cairo/cairo/Context.arc.html#radius"><code class="prettyprint lang-d">radius</code></a> to the current path.
+ The <code class="prettyprint lang-d">arc</code> is centered at <a href="../../cairo/cairo/Context.arc.html#center"><code class="prettyprint lang-d">center</code></a>, begins at <a href="../../cairo/cairo/Context.arc.html#angle1"><code class="prettyprint lang-d">angle1</code></a> and proceeds in
+ the direction of increasing angles to end at <a href="../../cairo/cairo/Context.arc.html#angle2"><code class="prettyprint lang-d">angle2</code></a>.
+ If <a href="../../cairo/cairo/Context.arc.html#angle2"><code class="prettyprint lang-d">angle2</code></a> is less than <a href="../../cairo/cairo/Context.arc.html#angle1"><code class="prettyprint lang-d">angle1</code></a> it will be progressively
+ increased by 2*PI until it is greater than <a href="../../cairo/cairo/Context.arc.html#angle1"><code class="prettyprint lang-d">angle1</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.arcNegative.html" class="public">
+										<code>arcNegative</code>
+									</a>
+								</td>
+								<td>Adds a circular <a href="../../cairo/cairo/Context.arc.html"><code class="prettyprint lang-d">arc</code></a> of the given <a href="../../cairo/cairo/Context.arcNegative.html#radius"><code class="prettyprint lang-d">radius</code></a> to the current path.
+ The <a href="../../cairo/cairo/Context.arc.html"><code class="prettyprint lang-d">arc</code></a> is centered at <a href="../../cairo/cairo/Context.arcNegative.html#center"><code class="prettyprint lang-d">center</code></a>, begins at <a href="../../cairo/cairo/Context.arcNegative.html#angle1"><code class="prettyprint lang-d">angle1</code></a> and proceeds
+ in the direction of decreasing angles to end at <a href="../../cairo/cairo/Context.arcNegative.html#angle2"><code class="prettyprint lang-d">angle2</code></a>.
+ If <a href="../../cairo/cairo/Context.arcNegative.html#angle2"><code class="prettyprint lang-d">angle2</code></a> is greater than <a href="../../cairo/cairo/Context.arcNegative.html#angle1"><code class="prettyprint lang-d">angle1</code></a> it will be progressively
+ decreased by 2*PI until it is less than <a href="../../cairo/cairo/Context.arcNegative.html#angle1"><code class="prettyprint lang-d">angle1</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.clip.html" class="public">
+										<code>clip</code>
+									</a>
+								</td>
+								<td>Establishes a new <code class="prettyprint lang-d">clip</code> region by intersecting the current
+ <code class="prettyprint lang-d">clip</code> region with the current path as it would be filled by
+ <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">fill</code></a>() and according to the current
+ <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">fill</code></a> rule (see <a href="../../cairo/cairo/Context.setFillRule.html"><code class="prettyprint lang-d">setFillRule</code></a>()).
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.clipExtents.html" class="public">
+										<code>clipExtents</code>
+									</a>
+								</td>
+								<td>Computes a bounding box in user coordinates covering the area
+ inside the current <a href="../../cairo/cairo/Context.clip.html"><code class="prettyprint lang-d">clip</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.clipPreserve.html" class="public">
+										<code>clipPreserve</code>
+									</a>
+								</td>
+								<td>Establishes a new <a href="../../cairo/cairo/Context.clip.html"><code class="prettyprint lang-d">clip</code></a> region by intersecting the current <a href="../../cairo/cairo/Context.clip.html"><code class="prettyprint lang-d">clip</code></a>
+ region with the current path as it would be filled by
+ <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">fill</code></a>() and according to the current <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">fill</code></a> rule
+ (see <a href="../../cairo/cairo/Context.setFillRule.html"><code class="prettyprint lang-d">setFillRule</code></a>()).
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.closePath.html" class="public">
+										<code>closePath</code>
+									</a>
+								</td>
+								<td>Adds a line segment to the path from the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> to
+ the beginning of the current sub-path, (the most recent
+ <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> passed to <a href="../../cairo/cairo/Context.moveTo.html"><code class="prettyprint lang-d">moveTo</code></a>()), and closes this sub-path.
+ After this call the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> will be at the joined
+ endpoint of the sub-path.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.copyClipRectangles.html" class="public">
+										<code>copyClipRectangles</code>
+									</a>
+								</td>
+								<td>Gets the current <a href="../../cairo/cairo/Context.clip.html"><code class="prettyprint lang-d">clip</code></a> region as a list of rectangles in user
+ coordinates.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.copyPage.html" class="public">
+										<code>copyPage</code>
+									</a>
+								</td>
+								<td>Emits the current page for backends that support multiple
+ pages, but doesn't clear it, so, the contents of the current
+ page will be retained for the next page too.
+ Use <a href="../../cairo/cairo/Context.showPage.html"><code class="prettyprint lang-d">showPage</code></a>() if you want to get an empty page after
+ the emission.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.copyPath.html" class="public">
+										<code>copyPath</code>
+									</a>
+								</td>
+								<td>Creates a copy of the current path and returns it to the user
+ as a <a href="../../cairo/cairo/Path.html"><code class="prettyprint lang-d">Path</code></a>. See <a href="../../cairo/cairo/PathRange.html"><code class="prettyprint lang-d">PathRange</code></a> for hints on how to
+ iterate over the returned data structure.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.copyPathFlat.html" class="public">
+										<code>copyPathFlat</code>
+									</a>
+								</td>
+								<td>Gets a flattened copy of the current path and returns it to
+ the user as a <a href="../../cairo/cairo/Path.html"><code class="prettyprint lang-d">Path</code></a>. See <a href="../../cairo/cairo/PathRange.html"><code class="prettyprint lang-d">PathRange</code></a> for hints
+ on how to iterate over the returned data structure.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.curveTo.html" class="public">
+										<code>curveTo</code>
+									</a>
+								</td>
+								<td>Adds a cubic Bézier spline to the path from the current
+ <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> to position <a href="../../cairo/cairo/Context.curveTo.html#p3"><code class="prettyprint lang-d">p3</code></a> in user-space coordinates, using <a href="../../cairo/cairo/Context.curveTo.html#p1"><code class="prettyprint lang-d">p1</code></a> and <a href="../../cairo/cairo/Context.curveTo.html#p2"><code class="prettyprint lang-d">p2</code></a>
+ as the control points. After this call the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> will be <a href="../../cairo/cairo/Context.curveTo.html#p3"><code class="prettyprint lang-d">p3</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.deviceToUser.html" class="public">
+										<code>deviceToUser</code>
+									</a>
+								</td>
+								<td>Transform a coordinate from device space to user space by
+ multiplying the given <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> by the inverse of the current
+ transformation <a href="../../cairo/cairo/Context.matrix.html"><code class="prettyprint lang-d">matrix</code></a> (CTM).
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.deviceToUserDistance.html" class="public">
+										<code>deviceToUserDistance</code>
+									</a>
+								</td>
+								<td>Transform a distance vector from device space to user space.
+ This function is similar to <a href="../../cairo/cairo/Context.deviceToUser.html"><code class="prettyprint lang-d">deviceToUser</code></a>() except that
+ the translation components of the inverse CTM will be ignored
+ when transforming <a href="../../cairo/cairo/Context.deviceToUserDistance.html#inp"><code class="prettyprint lang-d">inp</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.dispose.html" class="public">
+										<code>dispose</code>
+									</a>
+								</td>
+								<td>Explicitly drecrease the reference count.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.fill.html" class="public">
+										<code>fill</code>
+									</a>
+								</td>
+								<td>A drawing <a href="../../cairo/cairo/Context.operator.html"><code class="prettyprint lang-d">operator</code></a> that fills the current path according to
+ the current <code class="prettyprint lang-d">fill</code> rule, (each sub-path is implicitly closed
+ before being filled). After cfill(), the current
+ path will be cleared from the cairo context. See
+ <a href="../../cairo/cairo/Context.setFillRule.html"><code class="prettyprint lang-d">setFillRule</code></a>() and <a href="../../cairo/cairo/Context.fillPreserve.html"><code class="prettyprint lang-d">fillPreserve</code></a>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.fillExtends.html" class="public">
+										<code>fillExtends</code>
+									</a>
+								</td>
+								<td>Computes a bounding box in user coordinates covering the area
+ that would be affected, (the "inked" area), by a
+ <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">fill</code></a>() operation given the current path and <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">fill</code></a> parameters.
+ If the current path is empty, returns an empty <a href="../../cairo/cairo/Context.rectangle.html"><code class="prettyprint lang-d">rectangle</code></a>
+ ((0,0), (0,0)). <a href="../../cairo/cairo/Surface.html"><code class="prettyprint lang-d">Surface</code></a> dimensions and clipping are not
+ taken into account.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.fillPreserve.html" class="public">
+										<code>fillPreserve</code>
+									</a>
+								</td>
+								<td>A drawing <a href="../../cairo/cairo/Context.operator.html"><code class="prettyprint lang-d">operator</code></a> that fills the current path according to
+ the current <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">fill</code></a> rule, (each sub-path is implicitly closed
+ before being filled). Unlike <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">fill</code></a>(), <code class="prettyprint lang-d">fillPreserve</code>()
+ preserves the path within the cairo context.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.fontExtents.html" class="public">
+										<code>fontExtents</code>
+									</a>
+								</td>
+								<td>Gets the font extents for the currently selected font.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getAntiAlias.html" class="public">
+										<code>getAntiAlias</code>
+									</a>
+								</td>
+								<td>Gets the current shape antialiasing mode, as set by <a href="../../cairo/cairo/Context.setAntiAlias.html"><code class="prettyprint lang-d">setAntiAlias</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getCurrentPoint.html" class="public">
+										<code>getCurrentPoint</code>
+									</a>
+								</td>
+								<td>Gets the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> of the current path, which is conceptually
+ the final <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> reached by the path so far.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getDash.html" class="public">
+										<code>getDash</code>
+									</a>
+								</td>
+								<td>Gets the current dash array.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getDashCount.html" class="public">
+										<code>getDashCount</code>
+									</a>
+								</td>
+								<td>This function returns the length of the dash array in cr
+ (0 if dashing is not currently in effect).
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getFillRule.html" class="public">
+										<code>getFillRule</code>
+									</a>
+								</td>
+								<td>Gets the current <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">fill</code></a> rule, as set by <a href="../../cairo/cairo/Context.setFillRule.html"><code class="prettyprint lang-d">setFillRule</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getFontFace.html" class="public">
+										<code>getFontFace</code>
+									</a>
+								</td>
+								<td>Gets the current font face for a <a href="../../cairo/cairo/Context.html"><code class="prettyprint lang-d">Context</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getFontMatrix.html" class="public">
+										<code>getFontMatrix</code>
+									</a>
+								</td>
+								<td>Returns the current font <a href="../../cairo/cairo/Context.matrix.html"><code class="prettyprint lang-d">matrix</code></a>. See <a href="../../cairo/cairo/Context.setFontMatrix.html"><code class="prettyprint lang-d">setFontMatrix</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getFontOptions.html" class="public">
+										<code>getFontOptions</code>
+									</a>
+								</td>
+								<td>Retrieves font rendering options set via <a href="../../cairo/cairo/Context.setFontOptions.html"><code class="prettyprint lang-d">setFontOptions</code></a>().
+ Note that the returned options do not include any options
+ derived from the underlying surface; they are literally
+ the options passed to <a href="../../cairo/cairo/Context.setFontOptions.html"><code class="prettyprint lang-d">setFontOptions</code></a>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getGroupTarget.html" class="public">
+										<code>getGroupTarget</code>
+									</a>
+								</td>
+								<td>Gets the current destination surface for the context.
+ This is either the original <a href="../../cairo/cairo/Context.target.html"><code class="prettyprint lang-d">target</code></a> surface as passed to
+ the <a href="../../cairo/cairo/Context.html"><code class="prettyprint lang-d">Context</code></a> constructor or the <a href="../../cairo/cairo/Context.target.html"><code class="prettyprint lang-d">target</code></a> surface for the current
+ group as started by the most recent call to
+  <a href="../../cairo/cairo/Context.pushGroup.html"><code class="prettyprint lang-d">Context.pushGroup</code></a>() or  <a href="../../cairo/cairo/Context.pushGroup.html"><code class="prettyprint lang-d">Context.pushGroup</code></a>(<a href="../../cairo/cairo/Content.html"><code class="prettyprint lang-d">Content</code></a>).
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getLineCap.html" class="public">
+										<code>getLineCap</code>
+									</a>
+								</td>
+								<td>Gets the current line cap style, as set by <a href="../../cairo/cairo/Context.setLineCap.html"><code class="prettyprint lang-d">setLineCap</code></a>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getLineJoin.html" class="public">
+										<code>getLineJoin</code>
+									</a>
+								</td>
+								<td>Gets the current line join style, as set by <a href="../../cairo/cairo/Context.setLineJoin.html"><code class="prettyprint lang-d">setLineJoin</code></a>
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getLineWidth.html" class="public">
+										<code>getLineWidth</code>
+									</a>
+								</td>
+								<td>This function returns the current line width value exactly
+ as set by cairo_set_line_width(). Note that the value is
+ unchanged even if the CTM has changed between the calls
+ to <a href="../../cairo/cairo/Context.setLineWidth.html"><code class="prettyprint lang-d">setLineWidth</code></a>() and <code class="prettyprint lang-d">getLineWidth</code>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getMatrix.html" class="public">
+										<code>getMatrix</code>
+									</a>
+								</td>
+								<td>Returns the current transformation <a href="../../cairo/cairo/Context.matrix.html"><code class="prettyprint lang-d">matrix</code></a> (CTM)
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getMiterLimit.html" class="public">
+										<code>getMiterLimit</code>
+									</a>
+								</td>
+								<td>Gets the current miter limit, as set by <a href="../../cairo/cairo/Context.setMiterLimit.html"><code class="prettyprint lang-d">setMiterLimit</code></a>
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getOperator.html" class="public">
+										<code>getOperator</code>
+									</a>
+								</td>
+								<td>Gets the current compositing <a href="../../cairo/cairo/Context.operator.html"><code class="prettyprint lang-d">operator</code></a> for a cairo context.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getScaledFont.html" class="public">
+										<code>getScaledFont</code>
+									</a>
+								</td>
+								<td>Gets the current scaled font for a <a href="../../cairo/cairo/Context.html"><code class="prettyprint lang-d">Context</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getSource.html" class="public">
+										<code>getSource</code>
+									</a>
+								</td>
+								<td>Gets the current <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a> pattern for cr.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getTarget.html" class="public">
+										<code>getTarget</code>
+									</a>
+								</td>
+								<td>Gets the <a href="../../cairo/cairo/Context.target.html"><code class="prettyprint lang-d">target</code></a> surface for the cairo context as passed to
+ the constructor.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.getTolerance.html" class="public">
+										<code>getTolerance</code>
+									</a>
+								</td>
+								<td>Gets the current <a href="../../cairo/cairo/Context.tolerance.html"><code class="prettyprint lang-d">tolerance</code></a> value, as set by <a href="../../cairo/cairo/Context.setTolerance.html"><code class="prettyprint lang-d">setTolerance</code></a>
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.glyphExtents.html" class="public">
+										<code>glyphExtents</code>
+									</a>
+								</td>
+								<td>Gets the extents for an array of <a href="../../cairo/cairo/Context.glyphExtents.html#glyphs"><code class="prettyprint lang-d">glyphs</code></a>. The extents describe
+ a user-space <a href="../../cairo/cairo/Context.rectangle.html"><code class="prettyprint lang-d">rectangle</code></a> that encloses the "inked" portion of
+ the <a href="../../cairo/cairo/Context.glyphExtents.html#glyphs"><code class="prettyprint lang-d">glyphs</code></a>, (as they would be drawn by <a href="../../cairo/cairo/Context.showGlyphs.html"><code class="prettyprint lang-d">showGlyphs</code></a>()).
+ Additionally, the x_advance and y_advance values indicate
+ the amount by which the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> would be advanced by
+ <a href="../../cairo/cairo/Context.showGlyphs.html"><code class="prettyprint lang-d">showGlyphs</code></a>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.glyphPath.html" class="public">
+										<code>glyphPath</code>
+									</a>
+								</td>
+								<td>Adds closed paths for the <a href="../../cairo/cairo/Context.glyphPath.html#glyphs"><code class="prettyprint lang-d">glyphs</code></a> to the current path.
+ The generated path if filled, achieves an effect
+ similar to that of <a href="../../cairo/cairo/Context.showGlyphs.html"><code class="prettyprint lang-d">showGlyphs</code></a>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.hasCurrentPoint.html" class="public">
+										<code>hasCurrentPoint</code>
+									</a>
+								</td>
+								<td>Returns whether a current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> is defined on the current path.
+ See <a href="../../cairo/cairo/Context.getCurrentPoint.html"><code class="prettyprint lang-d">getCurrentPoint</code></a>() for details on the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.identityMatrix.html" class="public">
+										<code>identityMatrix</code>
+									</a>
+								</td>
+								<td>Resets the current transformation <a href="../../cairo/cairo/Context.matrix.html"><code class="prettyprint lang-d">matrix</code></a> (CTM) by setting it
+ equal to the identity <a href="../../cairo/cairo/Context.matrix.html"><code class="prettyprint lang-d">matrix</code></a>. That is, the user-space and
+ device-space axes will be aligned and one user-space unit
+ will <a href="../../cairo/cairo/Context.transform.html"><code class="prettyprint lang-d">transform</code></a> to one device-space unit.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.inClip.html" class="public">
+										<code>inClip</code>
+									</a>
+								</td>
+								<td>Tests whether the given <a href="../../cairo/cairo/Context.inClip.html#point"><code class="prettyprint lang-d">point</code></a> is inside the area that would
+ be visible through the current <a href="../../cairo/cairo/Context.clip.html"><code class="prettyprint lang-d">clip</code></a>, i.e. the area that
+ would be filled by a cairo_paint() operation.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.inFill.html" class="public">
+										<code>inFill</code>
+									</a>
+								</td>
+								<td>Tests whether the given <a href="../../cairo/cairo/Context.inFill.html#point"><code class="prettyprint lang-d">point</code></a> is inside the area that would
+ be affected by a cairo_fill() operation given the current path
+ and filling parameters. <a href="../../cairo/cairo/Surface.html"><code class="prettyprint lang-d">Surface</code></a> dimensions and clipping are not
+ taken into account.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.inStroke.html" class="public">
+										<code>inStroke</code>
+									</a>
+								</td>
+								<td>Tests whether the given <a href="../../cairo/cairo/Context.inStroke.html#point"><code class="prettyprint lang-d">point</code></a> is inside the area that would be
+ affected by a cairo_stroke() operation given the current path
+ and stroking parameters. <a href="../../cairo/cairo/Surface.html"><code class="prettyprint lang-d">Surface</code></a> dimensions and clipping are
+ not taken into account.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.lineTo.html" class="public">
+										<code>lineTo</code>
+									</a>
+								</td>
+								<td>Adds a line to the path from the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> to position <a href="../../cairo/cairo/Context.lineTo.html#p1"><code class="prettyprint lang-d">p1</code></a>
+ in user-space coordinates. After this call the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a>
+ will be <a href="../../cairo/cairo/Context.lineTo.html#p1"><code class="prettyprint lang-d">p1</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.mask.html" class="public">
+										<code>mask</code>
+									</a>
+								</td>
+								<td>A drawing <a href="../../cairo/cairo/Context.operator.html"><code class="prettyprint lang-d">operator</code></a> that paints the current <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a> using the
+ alpha channel of <a href="../../cairo/cairo/Context.mask.html#pattern"><code class="prettyprint lang-d">pattern</code></a> as a <code class="prettyprint lang-d">mask</code>. (Opaque areas of <a href="../../cairo/cairo/Context.mask.html#pattern"><code class="prettyprint lang-d">pattern</code></a>
+ are painted with the <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a>, transparent areas are not painted.)
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.maskSurface.html" class="public">
+										<code>maskSurface</code>
+									</a>
+								</td>
+								<td>A drawing <a href="../../cairo/cairo/Context.operator.html"><code class="prettyprint lang-d">operator</code></a> that paints the current <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a> using
+ the alpha channel of <a href="../../cairo/cairo/Context.maskSurface.html#surface"><code class="prettyprint lang-d">surface</code></a> as a <a href="../../cairo/cairo/Context.mask.html"><code class="prettyprint lang-d">mask</code></a>. (Opaque areas of
+ <a href="../../cairo/cairo/Context.maskSurface.html#surface"><code class="prettyprint lang-d">surface</code></a> are painted with the <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a>, transparent areas
+ are not painted.)
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.moveTo.html" class="public">
+										<code>moveTo</code>
+									</a>
+								</td>
+								<td>Begin a new sub-path. After this call the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> will be <a href="../../cairo/cairo/Context.moveTo.html#p1"><code class="prettyprint lang-d">p1</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.newPath.html" class="public">
+										<code>newPath</code>
+									</a>
+								</td>
+								<td>Clears the current path. After this call there will be no path
+ and no current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.newSubPath.html" class="public">
+										<code>newSubPath</code>
+									</a>
+								</td>
+								<td>Begin a new sub-path. Note that the existing path is not affected.
+ After this call there will be no current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.opAssign.html" class="public">
+										<code>opAssign</code>
+									</a>
+								</td>
+								<td>Assignment <a href="../../cairo/cairo/Context.operator.html"><code class="prettyprint lang-d">operator</code></a>
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.paint.html" class="public">
+										<code>paint</code>
+									</a>
+								</td>
+								<td>A drawing <a href="../../cairo/cairo/Context.operator.html"><code class="prettyprint lang-d">operator</code></a> that paints the current <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a> everywhere
+ within the current <a href="../../cairo/cairo/Context.clip.html"><code class="prettyprint lang-d">clip</code></a> region.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.paintWithAlpha.html" class="public">
+										<code>paintWithAlpha</code>
+									</a>
+								</td>
+								<td>A drawing <a href="../../cairo/cairo/Context.operator.html"><code class="prettyprint lang-d">operator</code></a> that paints the current <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a> everywhere
+ within the current <a href="../../cairo/cairo/Context.clip.html"><code class="prettyprint lang-d">clip</code></a> region using a <a href="../../cairo/cairo/Context.mask.html"><code class="prettyprint lang-d">mask</code></a> of constant <a href="../../cairo/cairo/Context.paintWithAlpha.html#alpha"><code class="prettyprint lang-d">alpha</code></a>
+ value <a href="../../cairo/cairo/Context.paintWithAlpha.html#alpha"><code class="prettyprint lang-d">alpha</code></a>. The effect is similar to <a href="../../cairo/cairo/Context.paint.html"><code class="prettyprint lang-d">paint</code></a>(), but
+ the drawing is faded out using the <a href="../../cairo/cairo/Context.paintWithAlpha.html#alpha"><code class="prettyprint lang-d">alpha</code></a> value.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.pathExtends.html" class="public">
+										<code>pathExtends</code>
+									</a>
+								</td>
+								<td>Computes a bounding box in user-space coordinates covering
+ the points on the current path. If the current path is empty,
+ returns an empty <a href="../../cairo/cairo/Box.html"><code class="prettyprint lang-d">Box</code></a> ((0,0), (0,0)). Stroke parameters,
+ <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">fill</code></a> rule, surface dimensions and clipping are not taken
+ into account.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.popGroup.html" class="public">
+										<code>popGroup</code>
+									</a>
+								</td>
+								<td>Terminates the redirection begun by a call to <a href="../../cairo/cairo/Context.pushGroup.html"><code class="prettyprint lang-d">Context.pushGroup</code></a>()
+ or <a href="../../cairo/cairo/Context.pushGroup.html"><code class="prettyprint lang-d">Context.pushGroup</code></a>(<a href="../../cairo/cairo/Content.html"><code class="prettyprint lang-d">Content</code></a>) and returns a new pattern
+ containing the results of all drawing operations performed to
+ the group.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.popGroupToSource.html" class="public">
+										<code>popGroupToSource</code>
+									</a>
+								</td>
+								<td>Terminates the redirection begun by a call to <a href="../../cairo/cairo/Context.pushGroup.html"><code class="prettyprint lang-d">Context.pushGroup</code></a>()
+ or <a href="../../cairo/cairo/Context.pushGroup.html"><code class="prettyprint lang-d">Context.pushGroup</code></a>(<a href="../../cairo/cairo/Content.html"><code class="prettyprint lang-d">Content</code></a>) and installs the resulting
+ pattern as the <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a> pattern in the given cairo context.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.pushGroup.html" class="public">
+										<code>pushGroup</code>
+									</a>
+								</td>
+								<td>Temporarily redirects drawing to an intermediate surface known
+ as a group. The redirection lasts until the group is completed
+ by a call to <a href="../../cairo/cairo/Context.popGroup.html"><code class="prettyprint lang-d">Context.popGroup</code></a>() or <a href="../../cairo/cairo/Context.popGroupToSource.html"><code class="prettyprint lang-d">Context.popGroupToSource</code></a>().
+ These calls provide the result of any drawing to the group as
+ a pattern, (either as an explicit object, or set as the <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a>
+ pattern).
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.pushGroup.html" class="public">
+										<code>pushGroup</code>
+									</a>
+								</td>
+								<td>Temporarily redirects drawing to an intermediate surface known
+ as a group. The redirection lasts until the group is completed
+ by a call to <a href="../../cairo/cairo/Context.popGroup.html"><code class="prettyprint lang-d">Context.popGroup</code></a>() or <a href="../../cairo/cairo/Context.popGroupToSource.html"><code class="prettyprint lang-d">Context.popGroupToSource</code></a>().
+ These calls provide the result of any drawing to the group
+ as a pattern, (either as an explicit object, or set as the
+ <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a> pattern).
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.rectangle.html" class="public">
+										<code>rectangle</code>
+									</a>
+								</td>
+								<td>Adds a closed sub-path <a href="../../cairo/cairo/Context.rectangle.html"><code class="prettyprint lang-d">rectangle</code></a> of the given <a href="../../cairo/cairo/size.html"><code class="prettyprint lang-d">size</code></a> to the
+ current path at position r.point in user-space coordinates.
+ This function is logically equivalent to:
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.relCurveTo.html" class="public">
+										<code>relCurveTo</code>
+									</a>
+								</td>
+								<td>Relative-coordinate version of <a href="../../cairo/cairo/Context.curveTo.html"><code class="prettyprint lang-d">curveTo</code></a>().
+ All offsets are relative to the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a>. Adds a
+ cubic Bézier spline to the path from the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a>
+ to a <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> offset from the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> by <a href="../../cairo/cairo/Context.relCurveTo.html#rp3"><code class="prettyprint lang-d">rp3</code></a>,
+ using points offset by <a href="../../cairo/cairo/Context.relCurveTo.html#rp1"><code class="prettyprint lang-d">rp1</code></a> and <a href="../../cairo/cairo/Context.relCurveTo.html#rp2"><code class="prettyprint lang-d">rp2</code></a> as the
+ control points. After this call the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> will
+ be offset by <a href="../../cairo/cairo/Context.relCurveTo.html#rp3"><code class="prettyprint lang-d">rp3</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.relLineTo.html" class="public">
+										<code>relLineTo</code>
+									</a>
+								</td>
+								<td>Relative-coordinate version of <a href="../../cairo/cairo/Context.lineTo.html"><code class="prettyprint lang-d">lineTo</code></a>(). Adds a line
+ to the path from the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> to a <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> that is
+ offset from the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> by <a href="../../cairo/cairo/Context.relLineTo.html#rp1"><code class="prettyprint lang-d">rp1</code></a> in user space.
+ After this call the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> will be offset by <a href="../../cairo/cairo/Context.relLineTo.html#rp1"><code class="prettyprint lang-d">rp1</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.relMoveTo.html" class="public">
+										<code>relMoveTo</code>
+									</a>
+								</td>
+								<td>Begin a new sub-path. After this call the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> will
+ offset by <a href="../../cairo/cairo/Context.relMoveTo.html#rp1"><code class="prettyprint lang-d">rp1</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.resetClip.html" class="public">
+										<code>resetClip</code>
+									</a>
+								</td>
+								<td>Reset the current <a href="../../cairo/cairo/Context.clip.html"><code class="prettyprint lang-d">clip</code></a> region to its original, unrestricted
+ state. That is, set the <a href="../../cairo/cairo/Context.clip.html"><code class="prettyprint lang-d">clip</code></a> region to an infinitely
+ large shape containing the <a href="../../cairo/cairo/Context.target.html"><code class="prettyprint lang-d">target</code></a> surface. Equivalently,
+ if infinity is too hard to grasp, one can imagine the <a href="../../cairo/cairo/Context.clip.html"><code class="prettyprint lang-d">clip</code></a>
+ region being reset to the exact bounds of the <a href="../../cairo/cairo/Context.target.html"><code class="prettyprint lang-d">target</code></a> surface.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.restore.html" class="public">
+										<code>restore</code>
+									</a>
+								</td>
+								<td>Restores cr to the state saved by a preceding call to
+ <a href="../../cairo/cairo/Context.save.html"><code class="prettyprint lang-d">Context.save</code></a>() and removes that state from the stack of
+ saved states.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.rotate.html" class="public">
+										<code>rotate</code>
+									</a>
+								</td>
+								<td>Modifies the current transformation <a href="../../cairo/cairo/Context.matrix.html"><code class="prettyprint lang-d">matrix</code></a> (CTM) by rotating
+ the user-space axes by <a href="../../cairo/cairo/Context.rotate.html#angle"><code class="prettyprint lang-d">angle</code></a> radians. The rotation of the
+ axes takes places after any existing transformation of user
+ space. The rotation direction for positive angles is from
+ the positive X axis toward the positive Y axis.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.save.html" class="public">
+										<code>save</code>
+									</a>
+								</td>
+								<td>Makes a copy of the current state of cr and saves it on an
+ internal stack of saved states for cr. When <a href="../../cairo/cairo/Context.restore.html"><code class="prettyprint lang-d">Context.restore</code></a>()
+ is called, cr will be restored to the saved state. Multiple
+ calls to <code class="prettyprint lang-d">Context.save</code>() and  <a href="../../cairo/cairo/Context.restore.html"><code class="prettyprint lang-d">Context.restore</code></a>() can be nested; each
+ call to  <a href="../../cairo/cairo/Context.restore.html"><code class="prettyprint lang-d">Context.restore</code></a>() restores the state from the matching
+ paired <code class="prettyprint lang-d">Context.save</code>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.scale.html" class="public">
+										<code>scale</code>
+									</a>
+								</td>
+								<td>Modifies the current transformation <a href="../../cairo/cairo/Context.matrix.html"><code class="prettyprint lang-d">matrix</code></a> (CTM) by scaling
+ the X and Y user-space axes by <a href="../../cairo/cairo/Context.scale.html#sx"><code class="prettyprint lang-d">sx</code></a> and <a href="../../cairo/cairo/Context.scale.html#sy"><code class="prettyprint lang-d">sy</code></a> respectively.
+ The scaling of the axes takes place after any existing
+ transformation of user space.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.selectFontFace.html" class="public">
+										<code>selectFontFace</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setAntiAlias.html" class="public">
+										<code>setAntiAlias</code>
+									</a>
+								</td>
+								<td>Set the antialiasing mode of the rasterizer used for
+ drawing shapes. This value is a hint, and a particular
+ backend may or may not support a particular value. At
+ the current time, no backend supports CAIRO_ANTIALIAS_SUBPIXEL
+ when drawing shapes.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setDash.html" class="public">
+										<code>setDash</code>
+									</a>
+								</td>
+								<td>Sets the dash pattern to be used by <a href="../../cairo/cairo/Context.stroke.html"><code class="prettyprint lang-d">stroke</code></a>(). A dash
+ pattern is specified by <a href="../../cairo/cairo/Context.setDash.html#dashes"><code class="prettyprint lang-d">dashes</code></a>, an array of positive values.
+ Each value provides the length of alternate "on" and
+ "off" portions of the <a href="../../cairo/cairo/Context.stroke.html"><code class="prettyprint lang-d">stroke</code></a>. The <a href="../../cairo/cairo/Context.setDash.html#offset"><code class="prettyprint lang-d">offset</code></a> specifies an <a href="../../cairo/cairo/Context.setDash.html#offset"><code class="prettyprint lang-d">offset</code></a>
+ into the pattern at which the <a href="../../cairo/cairo/Context.stroke.html"><code class="prettyprint lang-d">stroke</code></a> begins.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setFillRule.html" class="public">
+										<code>setFillRule</code>
+									</a>
+								</td>
+								<td>Set the current <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">fill</code></a> <a href="../../cairo/cairo/Context.setFillRule.html#rule"><code class="prettyprint lang-d">rule</code></a> within the cairo context. The <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">fill</code></a>
+ <a href="../../cairo/cairo/Context.setFillRule.html#rule"><code class="prettyprint lang-d">rule</code></a> is used to determine which regions are inside or outside
+ a complex (potentially self-intersecting) path. The current
+ <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">fill</code></a> <a href="../../cairo/cairo/Context.setFillRule.html#rule"><code class="prettyprint lang-d">rule</code></a> affects both <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">fill</code></a>() and <a href="../../cairo/cairo/Context.clip.html"><code class="prettyprint lang-d">clip</code></a>(). See
+ <a href="../../cairo/cairo/FillRule.html"><code class="prettyprint lang-d">FillRule</code></a> for details on the semantics of each
+ available <a href="../../cairo/cairo/Context.fill.html"><code class="prettyprint lang-d">fill</code></a> <a href="../../cairo/cairo/Context.setFillRule.html#rule"><code class="prettyprint lang-d">rule</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setFontFace.html" class="public">
+										<code>setFontFace</code>
+									</a>
+								</td>
+								<td>Replaces the current <a href="../../cairo/cairo/FontFace.html"><code class="prettyprint lang-d">FontFace</code></a> object in the <a href="../../cairo/cairo/Context.html"><code class="prettyprint lang-d">Context</code></a>
+ with the default font.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setFontFace.html" class="public">
+										<code>setFontFace</code>
+									</a>
+								</td>
+								<td>Replaces the current <a href="../../cairo/cairo/FontFace.html"><code class="prettyprint lang-d">FontFace</code></a> object in the <a href="../../cairo/cairo/Context.html"><code class="prettyprint lang-d">Context</code></a>
+ with <a href="../../cairo/cairo/Context.setFontFace.html#font_face"><code class="prettyprint lang-d">font_face</code></a>. The replaced font face in the <a href="../../cairo/cairo/Context.html"><code class="prettyprint lang-d">Context</code></a> will
+ be destroyed if there are no other references to it.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setFontMatrix.html" class="public">
+										<code>setFontMatrix</code>
+									</a>
+								</td>
+								<td>Sets the current font <a href="../../cairo/cairo/Context.setFontMatrix.html#matrix"><code class="prettyprint lang-d">matrix</code></a> to <a href="../../cairo/cairo/Context.setFontMatrix.html#matrix"><code class="prettyprint lang-d">matrix</code></a>. The font <a href="../../cairo/cairo/Context.setFontMatrix.html#matrix"><code class="prettyprint lang-d">matrix</code></a> gives
+ a transformation from the design space of the font (in this
+ space, the em-square is 1 unit by 1 unit) to user space.
+ Normally, a simple <a href="../../cairo/cairo/Context.scale.html"><code class="prettyprint lang-d">scale</code></a> is used (see <a href="../../cairo/cairo/Context.setFontSize.html"><code class="prettyprint lang-d">setFontSize</code></a>()),
+ but a more complex font <a href="../../cairo/cairo/Context.setFontMatrix.html#matrix"><code class="prettyprint lang-d">matrix</code></a> can be used to shear the font
+ or stretch it unequally along the two axes
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setFontOptions.html" class="public">
+										<code>setFontOptions</code>
+									</a>
+								</td>
+								<td>Sets a set of custom font rendering <a href="../../cairo/cairo/Context.setFontOptions.html#options"><code class="prettyprint lang-d">options</code></a> for the
+ <a href="../../cairo/cairo/Context.html"><code class="prettyprint lang-d">Context</code></a>. Rendering <a href="../../cairo/cairo/Context.setFontOptions.html#options"><code class="prettyprint lang-d">options</code></a> are derived by merging these
+ <a href="../../cairo/cairo/Context.setFontOptions.html#options"><code class="prettyprint lang-d">options</code></a> with the <a href="../../cairo/cairo/Context.setFontOptions.html#options"><code class="prettyprint lang-d">options</code></a> derived from underlying surface;
+ if the value in <a href="../../cairo/cairo/Context.setFontOptions.html#options"><code class="prettyprint lang-d">options</code></a> has a default value (like CAIRO_ANTIALIAS_DEFAULT),
+ then the value from the surface is used.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setFontSize.html" class="public">
+										<code>setFontSize</code>
+									</a>
+								</td>
+								<td>Sets the current font <a href="../../cairo/cairo/Context.matrix.html"><code class="prettyprint lang-d">matrix</code></a> to a <a href="../../cairo/cairo/Context.scale.html"><code class="prettyprint lang-d">scale</code></a> by a factor of <a href="../../cairo/cairo/Context.setFontSize.html#size"><code class="prettyprint lang-d">size</code></a>,
+ replacing any font <a href="../../cairo/cairo/Context.matrix.html"><code class="prettyprint lang-d">matrix</code></a> previously set with <code class="prettyprint lang-d">setFontSize</code>()
+ or <a href="../../cairo/cairo/Context.setFontMatrix.html"><code class="prettyprint lang-d">setFontMatrix</code></a>(). This results in a font <a href="../../cairo/cairo/Context.setFontSize.html#size"><code class="prettyprint lang-d">size</code></a> of
+ <a href="../../cairo/cairo/Context.setFontSize.html#size"><code class="prettyprint lang-d">size</code></a> user space units. (More precisely, this <a href="../../cairo/cairo/Context.matrix.html"><code class="prettyprint lang-d">matrix</code></a> will
+ result in the font's em-square being a <a href="../../cairo/cairo/Context.setFontSize.html#size"><code class="prettyprint lang-d">size</code></a> by <a href="../../cairo/cairo/Context.setFontSize.html#size"><code class="prettyprint lang-d">size</code></a>
+ square in user space.)
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setLineCap.html" class="public">
+										<code>setLineCap</code>
+									</a>
+								</td>
+								<td>Sets the current line <a href="../../cairo/cairo/Context.setLineCap.html#cap"><code class="prettyprint lang-d">cap</code></a> style within the cairo context.
+ See <a href="../../cairo/cairo/LineCap.html"><code class="prettyprint lang-d">LineCap</code></a> for details about how the available
+ line <a href="../../cairo/cairo/Context.setLineCap.html#cap"><code class="prettyprint lang-d">cap</code></a> styles are drawn.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setLineJoin.html" class="public">
+										<code>setLineJoin</code>
+									</a>
+								</td>
+								<td>Sets the current line <a href="../../cairo/cairo/Context.setLineJoin.html#join"><code class="prettyprint lang-d">join</code></a> style within the cairo context.
+ See <a href="../../cairo/cairo/LineJoin.html"><code class="prettyprint lang-d">LineJoin</code></a> for details about how the available
+ line <a href="../../cairo/cairo/Context.setLineJoin.html#join"><code class="prettyprint lang-d">join</code></a> styles are drawn.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setLineWidth.html" class="public">
+										<code>setLineWidth</code>
+									</a>
+								</td>
+								<td>Sets the current line <a href="../../cairo/cairo/Context.setLineWidth.html#width"><code class="prettyprint lang-d">width</code></a> within the cairo context. The line
+ <a href="../../cairo/cairo/Context.setLineWidth.html#width"><code class="prettyprint lang-d">width</code></a> value specifies the diameter of a pen that is circular
+ in user space, (though device-space pen may be an ellipse
+ in general due to scaling/shear/rotation of the CTM).
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setMatrix.html" class="public">
+										<code>setMatrix</code>
+									</a>
+								</td>
+								<td>Modifies the current transformation <a href="../../cairo/cairo/Context.setMatrix.html#matrix"><code class="prettyprint lang-d">matrix</code></a> (CTM) by setting it
+ equal to <a href="../../cairo/cairo/Context.setMatrix.html#matrix"><code class="prettyprint lang-d">matrix</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setMiterLimit.html" class="public">
+										<code>setMiterLimit</code>
+									</a>
+								</td>
+								<td>Sets the current miter <a href="../../cairo/cairo/Context.setMiterLimit.html#limit"><code class="prettyprint lang-d">limit</code></a> within the cairo context.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setOperator.html" class="public">
+										<code>setOperator</code>
+									</a>
+								</td>
+								<td>Sets the compositing <a href="../../cairo/cairo/Context.operator.html"><code class="prettyprint lang-d">operator</code></a> to be used for all
+ drawing operations. See <a href="../../cairo/cairo/Operator.html"><code class="prettyprint lang-d">Operator</code></a> for details on
+ the semantics of each available compositing <a href="../../cairo/cairo/Context.operator.html"><code class="prettyprint lang-d">operator</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setScaledFont.html" class="public">
+										<code>setScaledFont</code>
+									</a>
+								</td>
+								<td>Replaces the current font face, font <a href="../../cairo/cairo/Context.matrix.html"><code class="prettyprint lang-d">matrix</code></a>, and font options
+ in the <a href="../../cairo/cairo/Context.html"><code class="prettyprint lang-d">Context</code></a> with those of the <a href="../../cairo/cairo/ScaledFont.html"><code class="prettyprint lang-d">ScaledFont</code></a>. Except
+ for some translation, the current CTM of the cairo_t should be
+ the same as that of the <a href="../../cairo/cairo/ScaledFont.html"><code class="prettyprint lang-d">ScaledFont</code></a>, which can be
+ accessed using <a href="../../cairo/cairo/ScaledFont.getCTM.html"><code class="prettyprint lang-d">ScaledFont.getCTM</code></a>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setSource.html" class="public">
+										<code>setSource</code>
+									</a>
+								</td>
+								<td>Sets the <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a> pattern within cr to <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a>. This pattern will
+ then be used for any subsequent drawing operation until
+ a new <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a> pattern is set.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setSourceRGB.html" class="public">
+										<code>setSourceRGB</code>
+									</a>
+								</td>
+								<td>Sets the <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a> pattern within cr to an opaque color.
+ This opaque color will then be used for any subsequent
+ drawing operation until a new <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a> pattern is set.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setSourceRGBA.html" class="public">
+										<code>setSourceRGBA</code>
+									</a>
+								</td>
+								<td>Sets the <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a> pattern within cr to a translucent color.
+ This color will then be used for any subsequent drawing
+ operation until a new <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a> pattern is set.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setSourceSurface.html" class="public">
+										<code>setSourceSurface</code>
+									</a>
+								</td>
+								<td>This is a convenience function for creating a pattern from
+ surface and setting it as the <a href="../../cairo/cairo/Context.source.html"><code class="prettyprint lang-d">source</code></a> in cr with <a href="../../cairo/cairo/Context.setSource.html"><code class="prettyprint lang-d">Context.setSource</code></a>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.setTolerance.html" class="public">
+										<code>setTolerance</code>
+									</a>
+								</td>
+								<td>Sets the <a href="../../cairo/cairo/Context.setTolerance.html#tolerance"><code class="prettyprint lang-d">tolerance</code></a> used when converting paths into trapezoids.
+ Curved segments of the path will be subdivided until the maximum
+ deviation between the original path and the polygonal
+ approximation is less than <a href="../../cairo/cairo/Context.setTolerance.html#tolerance"><code class="prettyprint lang-d">tolerance</code></a>. The default value
+ is 0.1. A larger value will give better performance, a smaller
+ value, better appearance. (Reducing the value from the
+ default value of 0.1 is unlikely to improve appearance
+ significantly.) The accuracy of paths within Cairo is limited
+ by the precision of its internal arithmetic, and the prescribed
+ <a href="../../cairo/cairo/Context.setTolerance.html#tolerance"><code class="prettyprint lang-d">tolerance</code></a> is restricted to the smallest representable
+ internal value.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.showGlyphs.html" class="public">
+										<code>showGlyphs</code>
+									</a>
+								</td>
+								<td>A drawing <a href="../../cairo/cairo/Context.operator.html"><code class="prettyprint lang-d">operator</code></a> that generates the shape from an array of
+ <a href="../../cairo/cairo/Context.showGlyphs.html#glyphs"><code class="prettyprint lang-d">glyphs</code></a>, rendered according to the current <a href="../../cairo/cairo/Context.fontFace.html"><code class="prettyprint lang-d">fontFace</code></a>,
+ fontSize (<a href="../../cairo/cairo/Context.fontMatrix.html"><code class="prettyprint lang-d">fontMatrix</code></a>), and font options.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.showPage.html" class="public">
+										<code>showPage</code>
+									</a>
+								</td>
+								<td>Emits and clears the current page for backends that support
+ multiple pages. Use <a href="../../cairo/cairo/Context.copyPage.html"><code class="prettyprint lang-d">copyPage</code></a>() if you don't want to
+ clear the page.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.showText.html" class="public">
+										<code>showText</code>
+									</a>
+								</td>
+								<td>A drawing <a href="../../cairo/cairo/Context.operator.html"><code class="prettyprint lang-d">operator</code></a> that generates the shape from a string of
+ UTF-8 characters, rendered according to the current
+ <a href="../../cairo/cairo/Context.fontFace.html"><code class="prettyprint lang-d">fontFace</code></a>, fontSize (<a href="../../cairo/cairo/Context.fontMatrix.html"><code class="prettyprint lang-d">fontMatrix</code></a>), and <a href="../../cairo/cairo/Context.fontOptions.html"><code class="prettyprint lang-d">fontOptions</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.showTextGlyphs.html" class="public">
+										<code>showTextGlyphs</code>
+									</a>
+								</td>
+								<td>This operation has rendering effects similar to <a href="../../cairo/cairo/Context.showGlyphs.html"><code class="prettyprint lang-d">showGlyphs</code></a>()
+ but, if the <a href="../../cairo/cairo/Context.target.html"><code class="prettyprint lang-d">target</code></a> surface supports it, uses the provided
+ text and cluster mapping to embed the text for the glyphs
+ shown in the output. If the <a href="../../cairo/cairo/Context.target.html"><code class="prettyprint lang-d">target</code></a> does not support the
+ extended attributes, this function acts like the basic
+ <a href="../../cairo/cairo/Context.showGlyphs.html"><code class="prettyprint lang-d">showGlyphs</code></a>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.stroke.html" class="public">
+										<code>stroke</code>
+									</a>
+								</td>
+								<td>A drawing <a href="../../cairo/cairo/Context.operator.html"><code class="prettyprint lang-d">operator</code></a> that strokes the current path according to
+ the current line width, line join, line cap, and dash settings.
+ After <code class="prettyprint lang-d">stroke</code>(), the current path will be cleared from
+ the cairo context. See <a href="../../cairo/cairo/Context.setLineWidth.html"><code class="prettyprint lang-d">setLineWidth</code></a>(),
+ <a href="../../cairo/cairo/Context.setLineJoin.html"><code class="prettyprint lang-d">setLineJoin</code></a>(), <a href="../../cairo/cairo/Context.setLineCap.html"><code class="prettyprint lang-d">setLineCap</code></a>(), <a href="../../cairo/cairo/Context.setDash.html"><code class="prettyprint lang-d">setDash</code></a>(),
+ and <a href="../../cairo/cairo/Context.strokePreserve.html"><code class="prettyprint lang-d">strokePreserve</code></a>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.strokeExtends.html" class="public">
+										<code>strokeExtends</code>
+									</a>
+								</td>
+								<td>Computes a bounding box in user coordinates covering the area
+ that would be affected, (the "inked" area), by a <a href="../../cairo/cairo/Context.stroke.html"><code class="prettyprint lang-d">stroke</code></a>()
+ operation given the current path and <a href="../../cairo/cairo/Context.stroke.html"><code class="prettyprint lang-d">stroke</code></a> parameters. If the
+ current path is empty, returns an empty <a href="../../cairo/cairo/Context.rectangle.html"><code class="prettyprint lang-d">rectangle</code></a> ((0,0), (0,0)).
+ <a href="../../cairo/cairo/Surface.html"><code class="prettyprint lang-d">Surface</code></a> dimensions and clipping are not taken into account.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.strokePreserve.html" class="public">
+										<code>strokePreserve</code>
+									</a>
+								</td>
+								<td>A drawing <a href="../../cairo/cairo/Context.operator.html"><code class="prettyprint lang-d">operator</code></a> that strokes the current path according to
+ the current line width, line join, line cap, and dash settings.
+ Unlike <a href="../../cairo/cairo/Context.stroke.html"><code class="prettyprint lang-d">stroke</code></a>(), <code class="prettyprint lang-d">strokePreserve</code>() preserves
+ the path within the cairo context.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.textExtents.html" class="public">
+										<code>textExtents</code>
+									</a>
+								</td>
+								<td>Gets the extents for a string of <a href="../../cairo/cairo/Context.textExtents.html#text"><code class="prettyprint lang-d">text</code></a>. The extents describe
+ a user-space <a href="../../cairo/cairo/Context.rectangle.html"><code class="prettyprint lang-d">rectangle</code></a> that encloses the "inked"
+ portion of the <a href="../../cairo/cairo/Context.textExtents.html#text"><code class="prettyprint lang-d">text</code></a>, (as it would be drawn by <a href="../../cairo/cairo/Context.showText.html"><code class="prettyprint lang-d">showText</code></a>()).
+ Additionally, the x_advance and y_advance values indicate
+ the amount by which the current <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> would be advanced
+ by <a href="../../cairo/cairo/Context.showText.html"><code class="prettyprint lang-d">showText</code></a>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.textPath.html" class="public">
+										<code>textPath</code>
+									</a>
+								</td>
+								<td>Adds closed paths for <a href="../../cairo/cairo/Context.textPath.html#text"><code class="prettyprint lang-d">text</code></a> to the current path. The generated
+ path if filled, achieves an effect similar to that of
+ <a href="../../cairo/cairo/Context.showText.html"><code class="prettyprint lang-d">showText</code></a>().
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.transform.html" class="public">
+										<code>transform</code>
+									</a>
+								</td>
+								<td>Modifies the current transformation <a href="../../cairo/cairo/Context.transform.html#matrix"><code class="prettyprint lang-d">matrix</code></a> (CTM) by applying
+ <a href="../../cairo/cairo/Context.transform.html#matrix"><code class="prettyprint lang-d">matrix</code></a> as an additional transformation. The new
+ transformation of user space takes place after any
+ existing transformation.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.translate.html" class="public">
+										<code>translate</code>
+									</a>
+								</td>
+								<td>Modifies the current transformation <a href="../../cairo/cairo/Context.matrix.html"><code class="prettyprint lang-d">matrix</code></a> (CTM) by translating
+ the user-space origin by (<a href="../../cairo/cairo/Context.translate.html#tx"><code class="prettyprint lang-d">tx</code></a>, <a href="../../cairo/cairo/Context.translate.html#ty"><code class="prettyprint lang-d">ty</code></a>). This offset is interpreted
+ as a user-space coordinate according to the CTM in place
+ before the new call to <code class="prettyprint lang-d">translate</code>(). In other words,
+ the translation of the user-space origin takes place
+ after any existing transformation.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.userToDevice.html" class="public">
+										<code>userToDevice</code>
+									</a>
+								</td>
+								<td>Transform a coordinate from user space to device space by
+ multiplying the given <a href="../../cairo/cairo/point.html"><code class="prettyprint lang-d">point</code></a> by the current
+ transformation <a href="../../cairo/cairo/Context.matrix.html"><code class="prettyprint lang-d">matrix</code></a> (CTM).
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.userToDeviceDistance.html" class="public">
+										<code>userToDeviceDistance</code>
+									</a>
+								</td>
+								<td>Transform a distance vector from user space to device space.
+ This function is similar to <a href="../../cairo/cairo/Context.userToDevice.html"><code class="prettyprint lang-d">userToDevice</code></a>() except that
+ the translation components of the CTM will be ignored when
+ transforming <a href="../../cairo/cairo/Context.userToDeviceDistance.html#inp"><code class="prettyprint lang-d">inp</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.checkError.html" class="protected">
+										<code>checkError</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context._dereference.html" class="protected">
+										<code>_dereference</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context._reference.html" class="protected">
+										<code>_reference</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Aliases</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.currentPoint.html" class="public">
+										<code>currentPoint</code>
+									</a>
+								</td>
+								<td>convenience alias
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.groupTarget.html" class="public">
+										<code>groupTarget</code>
+									</a>
+								</td>
+								<td>convenience alias
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.resetFontFace.html" class="public">
+										<code>resetFontFace</code>
+									</a>
+								</td>
+								<td>convenience alias
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../cairo/cairo/Context.target.html" class="public">
+										<code>target</code>
+									</a>
+								</td>
+								<td>convenience alias
+</td>
+							</tr>
+						</table>
+					</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><table>   <tr><td>Johannes Pfau</td> <td>cairoD</td></tr>
+   <tr><td>Andrej Mitrovic</td> <td>cairoD</td></tr>
+   <tr><td><a href="http://cairographics.org">cairo team</a></td> <td>cairo</td></tr>
+ </table>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><table>   <tr><td>cairoD wrapper/bindings</td>
+     <td><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a></td></tr>
+   <tr><td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING">cairo</a></td>
+     <td><a href="http://cgit.freedesktop.org/cairo/tree/COPYING-LGPL-2.1">LGPL 2.1</a> /
+     <a href="http://cgit.freedesktop.org/cairo/plain/COPYING-MPL-1.1">MPL 1.1</a></td></tr>
+ </table>
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>
